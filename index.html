@@ -276,6 +276,41 @@
       -moz-animation: blink 0.7s infinite;
       animation: blink 0.7s infinite;
     }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+        /* iPhone 6 Portrait */ 
+      #title {
+        font-size: 3em;
+      }
+    }
+
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) { 
+        /* iPhone 6 landscape */
+    }
+
+
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) { 
+        /* iPhone 6+ Portrait */
+    }
+
+
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) { 
+        /* iPhone 6+ landscape */
+    }
+
+    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
+        /* iPhone 6 and iPhone 6+ portrait and landscape */
+    }
+
+    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){ 
+        /* iPhone 6 and iPhone 6+ portrait */
+    }
+
+    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){ 
+        /* iPhone 6 and iPhone 6+ landscape */
+    }
+
     @keyframes blink{
         0% { opacity:1; }
         50% { opacity:0; }
@@ -344,11 +379,11 @@
       <a class="item monogf" id="email" href="#contact"><i class="blue mail icon"></i>email</a -->
 
       <a class="item large monogflg" id="logo" href="#top">.JS<span id="underscore">_</span></a>
-      <!-- a class="item monogf" id="about" href="#"><i class="male icon"></i>about</a>
+      <a class="item monogf" id="about" href="#"><i class="male icon"></i>about</a>
       <a class="item monogf" id="coursework" href="#"><i class="university icon icon"></i>coursework</a>
       <a class="item monogf" id="projects" href="#"><i class="lab icon"></i>projects</a>
       <a class="item monogf" id="resume" href="#"><i class="file text icon"></i>resume</a>
-      <a class="item monogf" id="linkedin" href="https://www.linkedin.com/in/jhspringer"><i class="linkedin square icon"></i>linkedin</a -->
+      <a class="item monogf" id="linkedin" href="https://www.linkedin.com/in/jhspringer"><i class="linkedin square icon"></i>linkedin</a>
       <a class="item monogf" id="github" href="https://github.com/jspringer"><i class="github alternate icon"></i>github</a>
       <!-- a class="item monogf" id="codepen" href="https://codepen.io/jspringer/"><i class="brown codepen icon"></i>codepen</a -->
       <a class="item monogf" id="twitter" href="https://twitter.com/jsnspr"><i class="twitter square icon"></i>twitter</a>
