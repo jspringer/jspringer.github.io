@@ -209,10 +209,10 @@ function searchVersion(pstrDataString) {
 function hoverAnimations() {
       $(function() {
           $('#linkedin').hover(function(){  
-              $('.fa-linkedin-square').addClass('animated tada color-linkedin');     
+              $('.fa-linkedin').addClass('animated tada color-linkedin');     
           },
           function(){ 
-              $('.fa-linkedin-square').removeClass('animated tada color-linkedin');  
+              $('.fa-linkedin').removeClass('animated tada color-linkedin');  
           });
           $('#github').hover(function(){     
               $('.fa-github-alt').addClass('animated rubberBand color-github'); 
@@ -227,10 +227,10 @@ function hoverAnimations() {
               $('.').removeClass('teal');  
           }); */
           $('#twitter').hover(function(){     
-              $('.fa-twitter-square').addClass('animated tada color-twitter');    
+              $('.fa-twitter').addClass('animated tada color-twitter');    
           },
           function(){ 
-              $('.fa-twitter-square').removeClass('animated tada color-twitter');  
+              $('.fa-twitter').removeClass('animated tada color-twitter');  
           });
           $('#music').hover(function(){     
               $('.fa-music').addClass('animated rubberBand color-music');    
