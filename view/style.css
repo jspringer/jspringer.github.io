@@ -285,21 +285,25 @@ div[class^="col-"] {
 /* #top .overlay { background-color: #000; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.1; filter:alpha(opacity=10); z-index: 2; } */
 
 #title {
-  font-family: 'Kaushan Script', cursive !important;
+  font-family: 'Amatic SC', cursive !important;
   color: rgba(255, 255, 255, 1);
   text-align: center;
-  font-size: 100pt;
-  font-weight: 700;
+  font-size: 150pt;
+  font-weight: bold;
   /* text-shadow: 0.1px 0.1px 1px rgba(0, 0, 0, 0.7); */
 }
 
-#title-container {
-  padding-bottom: 1px;
+#title-padding {
+  padding-top: 80px;
 }
 
+/* #title-container {
+  padding-bottom: 1px;
+} */
+
 #icons-top {
-  margin-top: 2.5em;
-  font-size: 1.2em;
+  margin-top: 12px;
+  font-size: 17pt;
   /* text-shadow: 0.1px 0.1px 1px rgba(0, 0, 0, 0.7); */
 }
 
@@ -355,9 +359,10 @@ text-shadow: 0px 0px 2px #000000;
 } 
 
 #icons-top .fa {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 12px;
+  margin-right: 12px;
 }
+
 
 /* ******************* ABOUT ******************* */
 
