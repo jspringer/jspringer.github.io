@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Standard Meta -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <!-- Site Properties -->
+  <!-- ************* SITE PROPERTIES START ************* -->
+
   <title>Jason Springer</title>
   <meta property="og:title" content="Jason Springer">
   <meta property="og:site_name" content="Jason Springer">
-  <meta name="description" content="Web and mobile developer based in New York.">
-  <meta property="og:description" content="Web and mobile developer based in New York.">
+  <meta name="description" content="Software developer based in New York.">
+  <meta property="og:description" content="Software developer based in New York.">
   <meta name="keywords" content="web development, javascript, react, react native, node, mongodb, sql, php, python, java, swift, ios, apps, brooklyn, new york, web developer, ios developer, mobile developer">
   <meta property="go:url" content="http://jasonspringer.me/">
   <meta property="go:image" content="">
@@ -19,1077 +19,1014 @@
   <meta name="robots" content="index,follow">
   <meta name="language" content="en">
 
-  <script src="https://use.fontawesome.com/c0a8f6445e.js"></script>
-  <!-- link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" -->
-  <!-- Ubuntu+Mono|Berkshire+Swash|Pacifico|UnifrakturCook:700|Uncial+Antiqua|Pirata+One|Eczar|Almendra+SC|Aref+Ruqaa|Cantora+One|Federo|Fondamento|IM+Fell+French+Canon+SC|Lato|Open+Sans|Oswald|Roboto|Roboto+Condensed|Fjalla+One|Anton|Lobster|Shrikhand|Bangers|Carter+One|Changa+One|Luckiest+Guy|Rammetto+One|Inconsolata|Roboto+Mono|Amatic+SC|Kaushan+Script|Just+Another+Hand|Merienda|Quintessential --> 
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Kaushan+Script" rel="stylesheet">
+ <!-- ************* SITE PROPERTIES END ************* -->
 
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/examples/cover/cover.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script> 
-    $(document).ready(function() {  
-      $(function() {
-      // Set up to handle wrapping of tab menu (tab actuator) items
-                // Detect whether a Semantic UI tabular menu is wrapped
-      function checkIfWrapped() {
-          var pos_top_1st = $('.tabular.menu .item').first().position().top;
-          $('.tabular.menu .item:not(first-child)').each(function() {
-              var pos_top = $(this).position().top;
-              if (pos_top > pos_top_1st) {
-                  $(this).parent().addClass('wrapped');
-                  return;
-              } else if (pos_top == pos_top_1st) {
-                  $(this).parent().removeClass('wrapped');
-              }
-          });
-      }
-          $(window).resize(function() {
-            checkIfWrapped();
-          });
+    
+  <!-- ************* IMPORTS START ************* -->
 
-          checkIfWrapped(); // Make sure the function is fired upon document ready
-      });
-    });
-    </script>
-    <script>
-      (function($) {          
-        $(document).ready(function(){                    
-            $(window).scroll(function(){                          
-                if ($(this).scrollTop() > 630) {
-                    $('#menu').slideDown(300);
-                } else {
-                    $('#menu').slideUp(300);
-                }
-            });
-        });
-      })(jQuery);
-    </script>
-    <!-- script>
-      // Blurs bg img, unfortunately slows page down a bit and blurred everything in the section element         
-      $(document).ready(function(){  $(window).on('scroll', function () {
-          var pixs = $(document).scrollTop();
-          pixs = pixs / 100;
-          $(".topbgimg").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
-          });     
-        });
-    </script -->
+  <!--   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Ubuntu+Mono|Kaushan+Script|Noto+Serif|Domine|Abril+Fatface|Fjalla+One|Lobster|Droid+Serif|Lora||Merriweather:300,400,700,900|Playfair+Display|Oswald|Raleway:100,200,300,400,500,600,700,800,900|Roboto:100,300,400,500,700,900|Roboto+Condensed" rel="stylesheet" type="text/css" / -->
 
-    <script>
-      $(document).ready(function() {  
-        $(function() {
-          $('#about').hover(function(){    
-              $('.male').addClass('animated tada teal'); 
-          },
-          function(){ 
-              $('.male').removeClass('animated tada teal');  
-          });
-          $('#coursework').hover(function(){     
-              $('.university').addClass('animated rubberBand orange');
-          },
-          function(){ 
-              $('.university').removeClass('animated rubberBand orange');  
-          });
-          $('#projects').hover(function(){     
-              $('.lab').addClass('animated tada teal');
-          },
-          function(){ 
-              $('.lab').removeClass('animated tada teal');  
-          });
-          $('#resume').hover(function(){
-              $('.file').addClass('animated rubberBand orange');    
-          },
-          function(){ 
-              $('.file').removeClass('animated rubberBand orange');  
-          });
-          $('#linkedin').hover(function(){     
-              $('.fa-linkedin-square').addClass('animated tada teal');    
-          },
-          function(){ 
-              $('.fa-linkedin-square').removeClass('animated tada teal');  
-          });
-          $('#github').hover(function(){     
-              $('.fa-github-alt').addClass('animated rubberBand orange'); 
-          },
-          function(){ 
-              $('.fa-github-alt').removeClass('animated rubberBand orange');  
-          });
-          /* $('#codepen').mouseenter(function(){     
-              $('.codepen').transition('jiggle');    
-          },
-          function(){ 
-              $('.').removeClass('teal');  
-          }); */
-          $('#twitter').hover(function(){     
-              $('.fa-twitter-square').addClass('animated tada teal');    
-          },
-          function(){ 
-              $('.fa-twitter-square').removeClass('animated tada teal');  
-          });
-          $('#music').hover(function(){     
-              $('.fa-music').addClass('animated rubberBand orange');    
-          },
-          function(){ 
-              $('.fa-music').removeClass('animated rubberBand orange');  
-          });
-          $('#email').hover(function(){     
-              $('.fa-envelope').addClass('animated tada teal');    
-          },
-          function(){ 
-              $('.fa-envelope').removeClass('animated tada teal');  
-          });
-          $('#logo').hover(function(){     
-              $('#underscore').addClass('typed-cursor');    
-          },     
-          function(){    
-              $('#underscore').removeClass('typed-cursor');     
-          });
-          /* $('#title').hover(function(){     
-              $('#underscore2').addClass('typed-cursor');    
-          },     
-          function(){    
-              $('#underscore2').removeClass('typed-cursor');     
-          }); */
-      }); 
-    });
-  </script>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster|Domine|Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="view/style.css" rel="stylesheet" />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <style type="text/css">
-    @-moz-keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        -moz-transform: translateY(0);
-        transform: translateY(0);
-      }
-      40% {
-        -moz-transform: translateY(-30px);
-        transform: translateY(-30px);
-      }
-      60% {
-        -moz-transform: translateY(-15px);
-        transform: translateY(-15px);
-      }
-    }
-    @-webkit-keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-      }
-      40% {
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
-      }
-      60% {
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
-      }
-    }
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-      }
-      40% {
-        -moz-transform: translateY(-30px);
-        -ms-transform: translateY(-30px);
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
-      }
-      60% {
-        -moz-transform: translateY(-15px);
-        -ms-transform: translateY(-15px);
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
-      }
-    }
+  <!-- ************* IMPORTS END ************* -->
 
-    html, body {
-      background-color: transparent !important;
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-example">   
+    
+    <!-- ************* TOP START ************* --> 
+
+    <div id="top" class="jumbotron height-full bg-image" data-position="center right">
+      <div class="container" id="title-container">
+        <h1 id="title" class="animated fadeInDown">Jason Springer</h1>
+          <div class="container-fluid animated fadeInUp" id="icons-top">
+            <a id="top-icon-linkedin" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a id="top-icon-github" href="https://github.com/jspringer"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+            <a id="top-icon-twitter" href="https://twitter.com/jsnspr"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a id="top-icon-music" href="https://jsnspr.tumblr.com/"><i class="fa fa-music" aria-hidden="true"></i></a>
+            <a id="top-icon-email" data-toggle="modal" data-target="#exampleModal" data-whatever="jsnsprngr@gmail.com" href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </div>
+          <div id="title-padding">
+          </div>
+      </div>
       
-      background: 
-      /* linear-gradient(
-        rgba(36,65,75,0.58), 
-        rgba(36,65,75,0.58)
-      ); */
-      /* url('./images/yosemite-5k.jpg') 0 0 no-repeat; */
-      url('./images/mtfujifromsea.jpg') no-repeat center center fixed;
-      background-attachment: fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      position: relative;
-    } 
-    /*  background-color: #ffffff; */
-    hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-bottom: 1px solid white;
-      border-bottom-color: rgba(255,255,255,0.6);
-      margin: 0 auto;
-      padding: 0; 
-      width: 40em;
-      text-align: center;
-     }
-     h1 {
-      margin: 0 auto;
-      padding: 0; 
-     }
-
-     .teal {
-       color: #00B5AD !important;
-     }
-
-     .orange {
-       color: #CD3700 !important;
-     }
-    .jumbotron {
-      background-color: rgba(255,255,255,0.95) !important;
-    }
-    .jumbotron-fluid {
-      background-color: rgba(255,255,255,0.95) !important;
-    }
-    /* .container-fluid {
-      background-color: #ffffff;
-    } */
-
-    .topbgimg {
-      background: 
-      /*linear-gradient(
-        rgba(36,65,75,0.58), 
-        rgba(36,65,75,0.58)
-      ),*/
-      /* url('./images/yosemite-5k.jpg') 0 0 no-repeat; */
-      url('./images/mtfujifromsea.jpg') no-repeat center center fixed;
-      background-attachment: fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-color: #ffffff !important;
-      position: relative;
-    }
-
-    .bg1 {
-      background-color: #ffffff;
-      /* background: 
-      linear-gradient(
-        rgba(36,65,75,0.58), 
-        rgba(36,65,75,0.58)
-      ),*/ 
-      /* url('./images/yosemite-5k.jpg');
-      background-attachment: fixed;
-      background-size: cover;
-      text-align: center;
-      color: white;
-      width: 100%; */
-    }
-    #title {
-      // font-family: 'UnifrakturCook', cursive;
-      // font-family: 'Uncial Antiqua', cursive;
-      // font-family: 'Berkshire Swash', cursive;
-      // font-family: 'Almendra SC', serif;
-      // font-family: 'Aref Ruqaa', serif;
-      // font-family: 'Cantora One', sans-serif;
-      // font-family: 'Federo', sans-serif;
-      // font-family: 'Fondamento', cursive;
-      // font-family: 'IM Fell French Canon SC', serif;
-      /* Bangers|Carter+One|Changa+One|Luckiest+Guy|Rammetto+One|Inconsolata|Roboto+Mono|Amatic+SC|Kaushan+Script|Just+Another+Hand|Merienda|Quintessential */
-      // font-family: 'Ubuntu Mono', monospace;
-      font-family: 'Kaushan Script', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 8em;
-      font-weight: bold;
-      text-shadow: 0.1px 0.1px 0.1px rgba(0, 0, 0, 0.5);
-      // -webkit-text-stroke: 0.1px white; 
-    }
-
-    /* #title2 {
-      font-family: 'Kaushan Script', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    }
-
-    #title3 {
-      font-family: 'Just Another Hand', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    }
-
-    #title4 {
-      font-family: 'Merienda', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    }
-
-    #title5 {
-      font-family: 'Quintessential', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    }
-
-    #title6 {
-      font-family: 'Kaushan Script', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    }
-
-    #title7 {
-      font-family: 'Kaushan Script', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    }
-
-    #title8 {
-      font-family: 'Kaushan Script', cursive;
-      color: rgba(255, 255, 255, 1);
-      text-align: center;
-      font-size: 7em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    } */
-
-    #subtitle {
-      font-family: 'Open Sans', sans-serif;
-      color: #ffffff;
-      text-align: center;
-      font-size: 2em;
-      font-weight: none;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.60);
-    }
-    
-    #menu {
-      position:fixed;
-      display: none;
-    }
-    
-    .ui.menu .item img.logo {
-      margin-right: 1.5em;
-    }
-    #jumbtron-title {
-      // margin-top: 0.3em;
-      margin-bottom: 1.3em;
-      height: 100%;
-      vertical-align: middle;
-      display:flex;
-      display-direction:column;
-      justify-content:center;
-      align-items:center;
-      background-color: #ffffff !important;
-      /* background-image: none!important;
-      background-color: transparent!important; */
-    }
-    #icons-top {
-      margin-top: 2em;
-      font-size: 1.5em;
-      text-shadow: 0.1px 0.1px 0.1px rgba(0, 0, 0, 0.5);
-    }
-    #icons-top .fa {
-      margin-left: 0.5em;
-      margin-right: 0.5em;
-    }
-    #icons-menu {
-      /* margin-top: 0.5em;
-      font-size: 1em;
-      color: #000000; */
-      float: right;
-      /* position: absolute;
-      right: 0px; */
-    }
-    #icons-menu .fa {
-      margin-top: 0.5em;
-      font-size: 1.2em;
-      color: #000000;
-    }
-    #container-about {
-      background-color: rgba(255, 255, 255, 0.93);
-      padding-bottom: 50em;
-    }
-    .wireframe {
-      margin-top: 2em;
-    }
-    .ui.footer.segment {
-      margin: 5em 0em 0em;
-      padding: 5em 0em;
-    }
-    .monogf {
-      font-family: 'Ubuntu Mono', monospace;
-      // font-size: 10pt;
-    }
-    .monogflg {
-      font-family: 'Ubuntu Mono', monospace;
-      font-size: 1.2em;
-    }
-    .underblink {
-        text-decoration: blink;
-    }
-    .typed-cursor{
-      opacity: 1;
-      -webkit-animation: blink 0.7s infinite;
-      -moz-animation: blink 0.7s infinite;
-      animation: blink 0.7s infinite;
-    }
-
-    #qj-tabs {
-      display: flex !important;   /* Will not work unless defined as display: flex */
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-    }
-
-    #tabs-menu .wrapped .item {
-      border-radius: 5px !important;
-      border: 1px lightgray solid !important; /*  Just styling for the default theme here */
-      margin: 0 2px 2px 0 !important;
-    }
-
-    #tabs-menu .wrapped .active.item {
-        background-color: lightgray;
-    }
-
-    .arrow {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      margin-left:-20px;
-      width: 40px;
-      height: 40px;
-      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
-      background-size: contain;
-    }
-
-    .bounce {
-      -moz-animation: bounce 2s infinite;
-      -webkit-animation: bounce 2s infinite;
-      animation: bounce 2s infinite;
-    }
-
-    .navbar-custom {
-      color: #000000;
-      background-color: rgba(255, 255, 255, 0.95);
-      font-family: 'Ubuntu Mono', monospace;
-      text-shadow: none !important;
-       -webkit-box-shadow: 0 1px #e8e8e8;
-    -moz-box-shadow: 0 1px #e8e8e8;
-    box-shadow: 0 1px #e8e8e8;
-
-      /* font-size: 0.8em; */
-    }
-
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: #000000;
-    /* font-size: 1em; */
-}
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, .5);
-}
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
-}
-
-    /* navbar */
-.navbar-default {
-    background-color: #F8F8F8;
-    border-color: #E7E7E7;
-}
-/* Title */
-.navbar-default .navbar-brand {
-    color: #777;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #5E5E5E;
-}
-/* Link */
-.navbar-default .navbar-nav > li > a {
-    color: #777;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #333;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #E7E7E7;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
-    background-color: #D5D5D5;
-}
-/* Caret */
-.navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: #777;
-    border-bottom-color: #777;
-}
-.navbar-default .navbar-nav > .dropdown > a:hover .caret,
-.navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #333;
-    border-bottom-color: #333;
-}
-.navbar-default .navbar-nav > .open > a .caret,
-.navbar-default .navbar-nav > .open > a:hover .caret,
-.navbar-default .navbar-nav > .open > a:focus .caret {
-    border-top-color: #555;
-    border-bottom-color: #555;
-}
-/* Mobile version */
-.navbar-default .navbar-toggle {
-    border-color: #DDD;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #DDD;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #CCC;
-}
-
-.nav-link {
-  padding: 0 1em !important;
-}
-
-.navbar-brand {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-right:0 !important;
-  font-size: 1.25rem !important;
-  /* line-height:inherit !important; */
-}
-
-@media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #777;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-          color: #333;
-    }
-} 
-
-    /*
-    #downarrow {
-      padding-top: 100px;
-    }
-    #downarrow-span {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 24px;
-      height: 24px;
-      margin-left: -12px;
-      border-left: 1px solid #fff;
-      border-bottom: 1px solid #fff;
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      -webkit-animation: sdb 2s infinite;
-      animation: sdb 2s infinite;
-      box-sizing: border-box;
-    }
-    @-webkit-keyframes sdb {
-      0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-      }
-      20% {
-        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-      }
-      40% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-      }
-    }
-    @keyframes sdb {
-      0% {
-        transform: rotate(-45deg) translate(0, 0);
-      }
-      20% {
-        transform: rotate(-45deg) translate(-10px, 10px);
-      }
-      40% {
-        transform: rotate(-45deg) translate(0, 0);
-      }
-    }
-    */
-
-    /* .navbar-custom {
-      background-color: #ff5500;
-    } */
-    /* change the brand and text color */
-    /* 
-    .navbar-custom .navbar-brand,
-    .navbar-custom .navbar-text {
-        color: rgba(255,255,255,.8);
-    } */
-    /* change the link color */
-    /* 
-    .navbar-custom .navbar-nav .nav-link {
-        color: rgba(255,255,255,.5);
-    } */
-    /* change the color of active or hovered links */
-    /* 
-    .navbar-custom .nav-item.active .nav-link,
-    .navbar-custom .nav-item:hover .nav-link {
-        color: #ffffff;
-    } 
-
-    .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus { text-decoration: none; background-color: #ffffff; } */
-
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
-      #title {
-        font-size: 1em;
-      }
-      #menu {
-
-      }
-    }
-
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
-        /* iPhone 6 Portrait */ 
-      #title {
-        font-size: 6em;
-      }
-      #menu {
-
-      }
-    }
-
-
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) { 
-        /* iPhone 6 landscape */
-    }
-
-
-    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) { 
-        /* iPhone 6+ Portrait */
-      #title {
-        font-size: 6em;
-      }
-      #menu {
-
-      }
-    }
-    }
-
-
-    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) { 
-        /* iPhone 6+ landscape */
-    }
-
-    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
-        /* iPhone 6 and iPhone 6+ portrait and landscape */
-    }
-
-    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){ 
-        /* iPhone 6 and iPhone 6+ portrait */
-    }
-
-    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){ 
-        /* iPhone 6 and iPhone 6+ landscape */
-    }
-
-    @keyframes blink{
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-    @-webkit-keyframes blink{
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-    @-moz-keyframes blink{
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-    /* #about:hover {
-      color: #008080;
-    }
-    #resume:hover {
-      color: #A52A2A;
-    }
-    #linkedin:hover {
-      color: #32CD32;
-    }
-    #github:hover {
-      color: #FE9A76;
-    } 
-    #codepen:hover {
-      color: #B413EC;
-    } 
-    #twitter:hover {
-      color: #016936;
-    } 
-    #music:hover {
-      color: #0E6EB8;
-    } 
-    #email:hover {
-      color: #FFD700;
-    } */
-  </style>
-
-</head>
-<body data-spy="scroll" data-target="#navbar-example">
-  <!-- div class="ui fixed menu borderless compact stackable" id="menu">
-    <div class="ui container">
-      <a class="item large monogflg" id="logo" href="#top">.JS<span id="underscore">_</span></a>
-      <a class="item monogf" id="about" href="#"><i class="male icon"></i>about</a>
-      <a class="item monogf" id="coursework" href="#"><i class="university icon icon"></i>coursework</a>
-      <a class="item monogf" id="projects" href="#"><i class="lab icon"></i>projects</a>
-      <a class="item monogf" id="resume" href="#"><i class="file text icon"></i>resume</a>
-      <a class="item monogf" id="linkedin" href="https://www.linkedin.com/in/jhspringer"><i class="linkedin square icon"></i>linkedin</a>
-      <a class="item monogf" id="github" href="https://github.com/jspringer"><i class="github alternate icon"></i>github</a>
-      <a class="item monogf" id="twitter" href="https://twitter.com/jsnspr"><i class="twitter square icon"></i>twitter</a>
-      <a class="item monogf" id="music" href="http://jsnspr.tumblr.com/"><i class="music icon"></i>music</a>
-      <a class="item monogf" id="email" href="#contact"><i class="mail icon"></i>email</a>
+      <a href="#about" rel="m_PageScroll2id" class="scroll-down"> 
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </a>
     </div>
-  </div -->
 
-<!-- nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+    <!-- ************* TOP END ************* --> 
+
+
+    <!-- ************* NAVBAR START ************* --> 
+
+    <nav class="navbar navbar-default" id="navbar-example" role="navigation">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#about">About</a></li>
+          <li><a href="#skills-title">Skills</a></li>
+          <li><a href="#coursework">Coursework</a></li>
+          <li><a href="#job-history">Job History</a></li>  
+          <li><a href="#projects">Projects</a></li>   
+          <li><a href="#contact">Contact</a></li>
+          <li><a id="linkedin" class="bottom-nav-icons" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+              <a id="github" class="bottom-nav-icons" href="https://github.com/jspringer"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+              <a id="twitter" class="bottom-nav-icons" href="https://twitter.com/jsnspr"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a id="music" class="bottom-nav-icons" href="https://jsnspr.tumblr.com/"><i class="fa fa-music" aria-hidden="true"></i></a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
       </div>
     </nav>
 
-  <div id="top">&nbsp;</div -->  
+    <!-- ************* NAVBAR END ************* --> 
 
 
-  <!-- div class="site-wrapper" -->
+    <!-- ************* MAIN START ************* --> 
 
-      <!-- div class="site-wrapper-inner" -->
+    <!-- ************* ABOUT START ************* --> 
 
-        <!-- div class="cover-container" -->
+    <div id="about" class="height-full bg-image">
+     <div class="background-trans-white height-full">
+      <div class="container fadeInBlock">
 
-          <!-- div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">.JS_</h3>
-              <nav class="nav nav-masthead">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Contact</a>
-              </nav>
+        <div class="row">
+          <div class="col-md-4 text-left">
+            <img src="images/brooklynbridgepark-square-1084x1084.png" class="img-rounded" alt="Jason Springer" />
+          </div>
+          <div class="col-md-7">
+            <p>Hi there, </p>
+            <p>I'm Jason, a self-taught fullstack web developer based in Brooklyn, NY. <a href="#coursework">Scroll down</a> to see a list of the courses I have completed and visit my <a href="https://github.com/jspringer/coursework">Github page</a> for the corresponding coursework.</p>
+            <p>Before embarking on becoming a developer, I was a Customer Support Engineer for the marketing tech company <a href="http://www.sailthru.com/">Sailthru</a> and prior to that, a Software Product Specialist for the 3d printing company <a href="https://www.makerbot.com/">MakerBot Industries</a>.</p>
+            <p>For more details about my work and education history, please visit my <a href="https://www.linkedin.com/in/jhspringer">LinkedIn profile</a> or send me an <a href="#contact">email</a> for a copy of my resume.</p>  
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>   
+
+      </div>  
+     </div>
+    </div>  
+
+    <!-- ************* ABOUT END ************* --> 
+
+
+    <!-- ************* SKILLS START ************* --> 
+    
+    <div class="background-white" id="skills">
+
+      <div id="skills-title">
+          <div class="container fadeInBlock">
+             <h2>Skills</h2>
+          </div>
+      </div>
+
+      <div class="container" id="skills-main">
+        
+        <p class="intro-p fadeInBlock">Proficiency level for each skill varies depending on the complexity and the amount of time spent working with it. Anything in curly braces {} I am still in the early stages of learning.</p>
+        
+        <div class="row fadeInBlock">
+            
+          <div class="col-md-3">
+
+            <h4>Web</h4>
+            <ul class="no-bullets">
+            
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.w3.org/XML/">XML</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.w3.org/Style/CSS/">CSS3</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://lesscss.org/">LESS</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://sass-lang.com/">Sass</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://getbootstrap.com/">Bootstrap</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://semantic-ui.com/">Semantic UI</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript ES2015 & ES2016</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://json.org/">JSON</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://jquery.com/">jQuery</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://facebook.github.io/react/">React</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://angular.io/">Angular 2</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://secure.php.net/">PHP 7</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://laravel.com/">Laravel Framework</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://www.ruby-lang.org/en/">{Ruby}</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://rubyonrails.org/">{Ruby on Rails}</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://nodejs.org/en/">Node.js</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://expressjs.com/">Express</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/SQL">SQL</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.mongodb.com/">MongoDB</a></span>
+              </li>
+
+
+            </ul>
+          </div>
+          <div class="col-md-3">
+
+            <h4>Java, Mobile, Other</h4>
+            <ul class="no-bullets">
+
+              <li>
+                <span class="skill"><a href="https://www.python.org/">Python 2.7 & 3.6</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.java.com/en/">Java 7 & 8</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://spring.io/">Spring Framework</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://projects.spring.io/spring-boot/">Spring Boot</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Objective-C">{Objective-C}</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://swift.org/">{Swift}</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://facebook.github.io/react-native/">{React Native}</a></span>
+              </li>
+
+               <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Regular_expression">Regular Expression (Regex)</a></span>
+              </li>
+              
+            </ul>
+          </div>
+
+
+          <div class="col-md-3">
+            <h4>General</h4>
+            <ul class="no-bullets">
+              
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash (Command Line)</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://github.com/">Git / Github</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://www.uml.org/">UML</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/User_experience">User Experience (UX)</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model–View–Controller (MVC)</a> & <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel">Model–View–Viewmodel (MVVM)</a> Patterns</span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-Oriented Programming</a></span>
+              </li>
+
+               <li>
+                <span class="skill">Common <a href="https://en.wikipedia.org/wiki/Software_design_pattern">Design Patterns</a>: <a href="https://en.wikipedia.org/wiki/Factory_method_pattern">Factory Method</a>, <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singleton</a>, <a href="https://en.wikipedia.org/wiki/Facade_pattern">Facade</a>, <a href="https://en.wikipedia.org/wiki/Iterator_pattern">Iterator</a>, <a href="https://en.wikipedia.org/wiki/Observer_pattern">Observer</a>, <a href="https://en.wikipedia.org/wiki/Mediator_pattern">Mediator</a>, <a href="https://en.wikipedia.org/wiki/Strategy_pattern">Strategy</a>, <a href="https://en.wikipedia.org/wiki/Template_method_pattern">Template Method</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Inversion_of_control">Inversion of Control</a> & <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a></span>
+              </li>
+
+               <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>, <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a>, & <a href="https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)">GRASP</a> Principles</a></span>
+              </li>
+
+              <li>
+                <span class="skill">Common <a href="https://en.wikipedia.org/wiki/List_of_data_structures">Data Structures</a></span>
+              </li>
+
+              <li>
+                <span class="skill">Common <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">Sorting</a> & <a href="https://en.wikipedia.org/wiki/Search_algorithm">Searching</a> Algorithms</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Big_O_notation">Asymptotic (Big O) Notation</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Unit_testing">Unit Testing</a>, <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development (TDD)</a>, & <a href="https://en.wikipedia.org/wiki/Behavior-driven_development">Behavior Driven Development (BDD)</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Pair_programming">Pair Programming</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile Software Development</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://www.scrumguides.org/">SCRUM</a></span>
+              </li>
+
+
+              
+            </ul>
+          </div>
+
+
+          <div class="col-md-3">
+            <h4>Tools</h4>
+            <ul class="no-bullets">
+              
+
+              <li>
+                <span class="skill"><a href="https://www.sublimetext.com/">Sublime Text</a></span>
+              </li>
+
+               <li>
+                <span class="skill"><a href="https://atom.io/">Atom</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://netbeans.org/">NetBeans</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://www.vim.org/">Vim</a></span>
+              </li>
+
+               <li>
+                <span class="skill"><a href="https://developer.apple.com/xcode/">Xcode</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.atlassian.com/software/jira">JIRA</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="http://www.fogcreek.com/fogbugz/">FogBugz</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://trello.com/">Trello</a></span>
+              </li>
+
+               <li>
+                <span class="skill"><a href="https://slack.com/">Slack</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.docker.com/">Docker</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.virtualbox.org/">VirtualBox</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.gimp.org/">GIMP</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="">Photoshop</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.salesforce.com/">Salesforce</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.zendesk.com/">ZenDesk</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://magento.com/">Magento</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://en.wikipedia.org/wiki/Google_Docs%2C_Sheets_and_Slides">Google Docs, Sheets, & Slides</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="">Microsoft Office</a></span>
+              </li>
+
+              <li>
+                <span class="skill"><a href="https://www.apple.com/macos/">macOS / Mac OS X</a></span>
+              </li>
+              
+
+              <li>
+                <span class="skill"><a href="https://www.microsoft.com/en-us/windows/">Windows 7, 8, 10</a></span>
+              </li>
+              
+              <li>
+                <span class="skill"><a href="https://www.ubuntu.com/">Ubuntu Linux</a>, <a href="https://www.linuxmint.com/">Linux Mint</a></span>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ************* SKILLS END ************* --> 
+
+
+    <!-- ************* COURSEWORK START ************* --> 
+
+    <div class="background-white" id="coursework">
+      <div id="coursework-title">
+          <div class="container fadeInBlock">
+             <h2>Coursework</h2>
+          </div>
+      </div>
+
+      <div class="container">
+
+        <p class="intro-p fadeInBlock">Website names link to my profile when available, otherwise directly to their main page. The GitHub icon (<i class="fa fa-github-alt" aria-hidden="true"></i>) links to the related coursework on my <a href="https://github.com/jspringer">GitHub account</a>. The Codepen icon (<i class="fa fa-codepen" aria-hidden="true"></i>) links to my <a href="https://codepen.io/jspringer/">Codepen projects</a>.</p>
+
+        <div class="courses-outer">
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://app.pluralsight.com/profile/jason-springer">Pluralsight</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/pluralsight"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup></h3>
             </div>
-          </div -->
+          </div>
 
-<nav class="navbar navbar-toggleable-md navbar-custom fixed-top" id="menu">
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Rapid JavaScript Training | Rapid ES6 Training | Object-oriented Programming in JavaScript - ES6 | Practical Design Patterns in JavaScript | Building Applications with React and Flux | Building Applications with React and Redux in ES6 | Getting Started with Reactive Programming Using RxJS | Angular 2: Getting Started | Angular 2: First Look | PHP Fundamentals (PHP7) | Getting Started with Laravel (PHP Framework) - The Basics | Getting Started with Laravel (PHP Framework) - Models and Data | AWS Developer: The Big Picture</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Mobile</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Introduction to Objective-C</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Java</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Java Fundamentals: The Java Language | Java Fundamentals: The Core Platform | Java Fundamentals: Collections | Applying Concurrency and Multi-threading to Common Java Patterns | Introduction to Testing in Java | Functional Programming With Java | Design Patterns in Java: Creational | Design Patterns in Java: Structural | Design Patterns in Java: Behavioral | [Java] Spring Fundamentals | Introduction to Spring MVC [3] | Introduction to Spring MVC 4 | Creating Your First Spring Boot Application | Spring with JPA and Hibernate | Getting Started with Spring Data JPA</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Other Languages</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Python 3 Fundamentals | The C Programming Language in Action</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Computer Science & Programming</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Algorithms and Data Structures | Encapsulation and SOLID [Principles of OOP] | SOLID [and DRY] Principles of Object Oriented Design | Clean Code: Writing Code for Humans | Picturing Architecture: UML (The Good Bits) and More | Pair Programming</p>
+            </div>
+          </div>
 
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#" id="logo">.JS<span id="underscore">_</span></a>
-    <ul class="navbar-nav mr-auto mt-0 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-
-                      <div class="container" id="icons-menu">
-                  <a id="linkedin" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                  <a id="github" href="https://github.com/jspringer"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-                  <a id="twitter" href="https://twitter.com/jsnspr"><i class="fa fa-twitter-square" aria-hidden="true"></i></i></a>
-                  <a id="music" href="http://jsnspr.tumblr.com/"><i class="fa fa-music" aria-hidden="true"></i></a>
-                  <a id="email" href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                </div>
-
-    </ul>
-  </div>
-</nav>
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">UX & Design</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>User Experience Tips and Tricks for Developers | Hacking the User Experience / UX for Developers</p>
+            </div>
+          </div>
 
 
-    <!-- nav class="navbar navbar-toggleable-md sticky-top navbar-light bg-faded" id="menu">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Navbar</a>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Features</a>
-          <a class="nav-item nav-link" href="#">Pricing</a>
-          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Other</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Docker and Containers: The Big Picture | Docker for Web Developers | Scrum Fundamentals</p>
+            </div>
+          </div>
+         </div>
+          
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://www.udemy.com/">Udemy</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/udemy"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup></h3>
+            </div>
+          </div>
+
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="https://www.udemy.com/the-web-developer-bootcamp/">The Web Developer Bootcamp</a> (HTML5, CSS3, Bootstrap, Semantic UI, JavaScript, jQuery, Node.js, Express, MongoDB, Git, Heroku) <a href="https://www.udemy.com/certificate/UC-D0TERNDS/">[Certificate]</a></p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://www.edx.org/school/harvardx">Harvard/edX</a></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Computer Science & Programming</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50</a> <sup class="small-text">(<a href="https://www.youtube.com/user/cs50tv">watched</a> the entire course and supplemental lessons)</sup></p>
+            </div>
+          </div>
+         </div>
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://www.freecodecamp.com/jspringer">FreeCodeCamp</a> <sup><a href="http://codepen.io/jspringer/"><i class="fa fa-codepen" aria-hidden="true"></i></a></sup></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>HTML5 | CSS3 | Bootstrap 3 | JavaScript | jQuery</p>
+            </div>
+          </div>
+         </div>
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://www.codeschool.com/users/jspringer">Code School</a></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>HTML5 | CSS3 | Bootstrap 3.3 | Sass | Flexbox | jQuery | JavaScript ES2015 | JavaScript Best Practices | Angular 2 | React | MongoDB | Express | Node.js | SQL | Web Design Fundamentals | Mobile Web Design | CSS Web Animations | SVG</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Other</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Git | Python 3 | Regular Expressions</p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://teamtreehouse.com/jasonspringer">Team Treehouse</a></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>How to Make a Website (HTML5, CSS3)</p>
+            </div>
+          </div>
+
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Mobile</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Swift 2.0 Basics | Build a Simple iPhone App with Swift 2.0 | Object-Oriented Swift 2.0 | Swift 2.0 Functions | Swift 2.0 Collections and Control Flow</p>
+            </div>
+          </div>
+         </div>
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://www.codecademy.com/jsnspringer">Codecademy</a></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>HTML & CSS | Sass | jQuery | JavaScript | AngularJS | React | PHP | Ruby | Ruby on Rails | SQL</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Other</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Git | Python | CLI</p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://learn.co/jspringer">Flatiron School / Learn.co</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/learn.co"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup> <sup class="small-text">(account needed to see my profile, <a href="">screenshot</a>)</sup></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="https://flatironschool.com/programs/online-intro-ruby-free-course/">Intro to Ruby Development</a> <sup class="small-text">(progress <a href="">screenshot</a>)</sup></p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Mobile</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="https://flatironschool.com/programs/online-swift-free-course/">iOS Development Fundamentals</a> <sup class="small-text">(progress <a href="">screenshot</a>)</sup></p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://nodeschool.io/">Nodeschool</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/nodeschool"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Node.js | Express | MongoDB | React | Git</p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://generalassemb.ly/">General Assembly</a></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Intermediate JavaScript | Introduction to Node.js | SQL Bootcamp</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Python & Data Science</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>Introduction to Python | Python for Data Science</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">UX & Design</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>UX Design 2 Day Bootcamp</p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3><a href="https://www.fullstackacademy.com/">Fullstack Academy</a></h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Web</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p>JavaScript Jumpstart <sup class="small-text">(3 night introductory course)</sup></p>
+            </div>
+          </div>
+         </div>
+
+
+         <div class="courses-block fadeInBlock">
+          <div class="courses-header row">
+            <div class="col-md-12">
+              <h3>Books</h3>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Java</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="https://www.goodreads.com/book/show/231262.Head_First_Java"><span class="italic">Head First Java, 2nd Edition</span></a> - Sierra, Bates</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">Computer Science & Programming</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="http://interactivepython.org/runestone/static/pythonds/index.html"><span class="italic">Problem Solving with Algorithms and Data Structures using Python</span></a> <sup class="small-text">(interactive book)</sup> - Miller, Ranum</p>
+            </div>
+          </div>
+
+          <div class="courses row">
+            <div class="col-md-2">
+              <h4 class="text-right">UX & Design</h4>
+            </div>
+            <div class="col-md-10 courses-list">
+              <p><a href="https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited"><span class="italic">Don't Make Me Think: Web Usability, 3rd Edition</span></a> - Steve Krug</p>
+            </div>
+          </div>
+         </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ************* COURSEWORK END ************* --> 
+
+    <!-- ************* JOB HISTORY START ************* --> 
+
+    <div class="background-white" id="job-history">
+      <div id="job-history-title">
+          <div class="container fadeInBlock">
+             <h2>Job History</h2>
+          </div>
+      </div>
+
+      <div class="container fadeInBlock">
+
+        <p class="intro-p">See <a href="https://www.linkedin.com/in/jhspringer/">LinkedIn profile</a> or <a href="#contact">request</a> a full resume for more work and education history details. I took time off to study the material listed in the <a href="#coursework">Coursework</a> section.</p>
+
+        <div class="jobs">
+          <div class="job row">
+            <div class="col-md-4">
+              <h5><a href="https://www.sailthru.com/">Sailthru</a></h5>
+              <p class="job-location">
+                New York, NY
+              </p>
+            </div>
+            <div class="col-md-8">
+                <h6>Client Support Engineer</h6>
+                <p class="job-period">
+                  August 2014        - 
+                  July 2016     </p>
+                <span class="job-description">
+                    
+                </span>
+            </div>
+          </div>
+          
+          <div class="vertical-padding">
+          </div>
+                  
+          <div class="job row">
+            <div class="col-md-4">
+              <h5><a href="https://www.makerbot.com/">MakerBot</a></h5>
+              <p class="job-location">
+                Brooklyn, NY
+              </p>
+            </div>
+            <div class="col-md-8">
+              <p>
+                <h6>Product Specialist</h6>
+                <p class="job-period">
+                  September 2013        - 
+                  August 2014      </p>
+                <span class="job-description">
+                    
+                </span>
+              </p>
+            </div>
+          </div>
+
+
+          <div class="job row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+              <p>
+                <h6>Technical Support Expert</h6>
+                <p class="job-period">
+                  August 2012        - 
+                  August 2013      </p>
+                <span class="job-description">
+                    
+                </span>
+              </p>
+            </div>
+          </div>
+          
+        </div>
+  
+      </div>
+    </div>
+
+    <!-- ************* JOB HISTORY END ************* --> 
+
+
+    <!-- ************* PROJECTS START ************* --> 
+    
+    <div class="background-white" id="projects">
+      <div id="projects-title">
+          <div class="container fadeInBlock">
+             <h2>Projects</h2>
+          </div>
+      </div>
+
+      <div class="container fadeInBlock">
+
+        <p class="intro-p">I will be adding projects here shortly. In the meantime, please visit my <a href="https://github.com/jspringer">GitHub</a> and <a href="https://codepen.io/jspringer/">Codepen</a> pages.</p>
+
+      </div>
+
+      <div class="container fadeInBlock" id="projects-main">
+      </div>
+    </div>
+
+    <!-- ************* PROJECTS END ************* --> 
+
+
+    <!-- ************* CONTACT START ************* --> 
+
+    <div id="contact-top" class="bg-image">
+     <div class="background-trans-gray">
+      <div id="contact" class="container">
+        <h2 class="fadeInBlock">Contact</h2>
+
+        <p class="intro-p fadeInBlock" id="contact-intro">If you would like to contact me about a job position or anything else, please fill out the form below with your full name, email, company website link, and message and I will get back to you shortly. </p>
+
+        <div class="row fadeInBlock">
+          <div class="col-md-6">
+            <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbxFlwJpKxBM1383hVHMXHomXCRJS8dh27H5YgJXgSdg9znf2lk/exec">
+
+              <div class="form-group">
+                <label for="form-name"><h4>Name</h4></label>
+                <input type="text" class="form-control" id="form-name" placeholder="Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email"><h4>Email</h4></label>
+                <input type="email" class="form-control" id="form-email" placeholder="Email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-company"><h4>Company</h4></label>
+                <input type="text" class="form-control" id="form-company" placeholder="Company (optional)">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message"><h4>Message</h4></label>
+                  <textarea class="form-control" rows="7" id="form-message" placeholder="Message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+
+          <div class="col-md-5 kxcd rounded">
+            <a href="https://xkcd.com/1185/"><img src="https://imgs.xkcd.com/comics/ineffective_sorts.png" width="100%"></a>
+          </div>
+
+          <div class="form-thankyou" id="thankyou_message">
+            <p>Thank you. I will return your message soon.</p>
+          </div>
+          
+        </div>
+
+        <hr />
+
+        <div class="row fadeInBlock text-center">
+          <div class="col-md-12" id="copyright">
+            <p>Copyright © 2017 Jason Springer. All rights reserved.</p>
+          </div>
+        </div>
+
+      </div>
+     </div>
+    </div>
+
+    <!-- ************* CONTACT END ************* --> 
+
+
+    <!-- ************* OUT OF DATE NOTICE START ************* --> 
+    
+    <div class="modal fade" id="upgrade-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Your browser is out of date</h4>
+          </div>
+          <div class="modal-body">
+            <p>To get the best possible experience using our site we recommend that you upgrade to a modern web browser. To download a newer web browser click on the Upgrade button.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="http://browsehappy.com/" target="_blank" class="btn btn-primary">Upgrade</a>
+          </div>
         </div>
       </div>
-    </nav -->
+    </div>
+
+    <!-- ************* OUT OF DATE NOTICE END ************* --> 
 
 
-          <section class="jumbotron-fluid topbgimg" id="jumbtron-title">
-              <div class="container-fluid">
-                <h1 id="title" class="animated fadeInDown">Jason Springer</h1>
-                <div class="container-fluid animated fadeInUp" id="icons-top">
-                  <a id="linkedin0" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                  <a id="github0" href="https://github.com/jspringer"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-                  <a id="twitter0" href="https://twitter.com/jsnspr"><i class="fa fa-twitter-square" aria-hidden="true"></i></i></a>
-                  <a id="music0" href="http://jsnspr.tumblr.com/"><i class="fa fa-music" aria-hidden="true"></i></a>
-                  <a id="email0" href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                </div>
-              </div>
-          </section>
-
-          <!-- div class="jumbotron-fluid">
-                        <div class="container-fluid" style="background-color: #ffffff">
-                <a href="#about" id="downarrow"><span id="downarrow-span"></span>Test</a>
-              </div>
-          </div -->
-
-          <!-- a href="#about"><span class="arrow bounce"></span></a -->
-          <section class="container">
-                <div class="jumbotron">
-                  <h1>Jason Springer</h1>
-                </div>
-          </section>
-                    <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
+    <!-- ************* MAIN END ************* --> 
 
 
-                    <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
+    <!-- ************* JAVASCRIPT IMPORTS START ************* -->
 
+    <script src="https://use.fontawesome.com/c0a8f6445e.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" 
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="view/js/script.js"></script>
+    <script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="view/js/jquery.malihu.PageScroll2id.min.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
-                    <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
+    <!-- script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 
+    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" 
+    crossorigin="anonymous"></script -->
 
+    <!-- ************* JAVASCRIPT IMPORTS END ************* -->
 
-                    <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                                        <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-                              <div class="jumbotron-fluid">
-              <div class="container-fluid">
-                <h1>Jason Springer</h1>
-              </div>
-          </div>
-
-          <!-- div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div -->
-
-
-        <!-- /div -->
-
-      <!-- /div -->
-
-  <!-- /div -->
-
-
-
-  <!-- div class="ui container" -->
-    <!-- div class="ui main container grid" id="container-title">
-      <div class="one column middle aligned">
-        <h1 class="ui header" id="title">Jason Springer</h1 -->
-        <!-- h2 id="subtitle">Web Developer</h2 -->
-      <!-- /div>
-    </div -->
-  <!-- /div -->
-
-
-
-</body>
-
+  </body>
 </html>
