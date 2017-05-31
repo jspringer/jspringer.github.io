@@ -128,6 +128,10 @@ div[class^="col-"] {
   color: #b50008 !important;
 }
 
+.green {
+  color: #5cb85c !important;
+}
+
 .position-fixed {
   position: fixed;
 }
@@ -602,6 +606,9 @@ text-shadow: 0px 0px 2px #000000;
 
 .form-thankyou {
   display: none;
+  padding-top: 30px;
+  font-size: 13pt !important;
+  font-family: 'Roboto', sans-serif; 
 }
 
 #contact-intro {

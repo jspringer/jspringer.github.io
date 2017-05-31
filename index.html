@@ -801,7 +801,7 @@
               <h4 class="text-right">UX & Design</h4>
             </div>
             <div class="col-md-10 courses-list">
-              <p><a href="https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited"><span class="italic">Don't Make Me Think: Web Usability, 3rd Edition</span></a> - Steve Krug</p>
+              <p><a href="https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited"><span class="italic">Don't Make Me Think: Web Usability, 3rd Edition</span></a> - Steve Krug</p> <p><a href="https://www.goodreads.com/book/show/24346911-ux-strategy"><span class="italic">UX Strategy</span></a> - Jaime Levy</p>
             </div>
           </div>
          </div>
@@ -927,26 +927,30 @@
 
         <div class="row fadeInBlock">
           <div class="col-md-6">
+
+            <div class="form-thankyou" id="thankyou_message">
+              <p><i class="fa fa-check green" aria-hidden="true"></i> Thank you! I will return your message soon.</p>
+            </div>
             <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbxFlwJpKxBM1383hVHMXHomXCRJS8dh27H5YgJXgSdg9znf2lk/exec">
 
               <div class="form-group">
                 <label for="form-name"><h4>Name</h4></label>
-                <input type="text" class="form-control" id="form-name" placeholder="Name" required>
+                <input type="text" name="name" class="form-control" id="form-name" placeholder="Name" required>
               </div>
 
               <div class="form-group">
                 <label for="form-email"><h4>Email</h4></label>
-                <input type="email" class="form-control" id="form-email" placeholder="Email" required>
+                <input type="email" name="email" class="form-control" id="form-email" placeholder="Email" required>
               </div>
 
               <div class="form-group">
                 <label for="form-company"><h4>Company</h4></label>
-                <input type="text" class="form-control" id="form-company" placeholder="Company (optional)">
+                <input type="text" name="company" class="form-control" id="form-company" placeholder="Company (optional)">
               </div>
 
               <div class="form-group">
                 <label for="form-message"><h4>Message</h4></label>
-                  <textarea class="form-control" rows="7" id="form-message" placeholder="Message" required></textarea>
+                  <textarea name="message" class="form-control" rows="7" id="form-message" placeholder="Message" required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary" form="gform">Submit</button>
@@ -955,10 +959,6 @@
 
           <div class="col-md-5 kxcd rounded">
             <a href="https://xkcd.com/1185/"><img src="https://imgs.xkcd.com/comics/ineffective_sorts.png" width="100%"></a>
-          </div>
-
-          <div class="form-thankyou" id="thankyou_message">
-            <p>Thank you. I will return your message soon.</p>
           </div>
           
         </div>
