@@ -3,9 +3,9 @@
 html, body { height: 100%; }
 body { background: #ffffff; font-size: 14pt; line-height: 1.65; color: #434242; font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; font-weight: 300 !important; text-rendering:optimizeLegibility; -webkit-font-smoothing: subpixel-antialiased}
 /* #f7f9fc */ 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Domine', serif !important; margin-bottom: 0; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Playfair Display', serif !important; margin-bottom: 0; }
 h1,h4 { font-weight: 700; margin-bottom: 10px; }
-h2 { font-family: 'Lobster', cursive !important; font-weight: 500; color: rgba(28, 28, 28, 0.95); font-size: 80px; text-align: left; margin: 0 !important; line-height: 01 !important; padding-top: 10px !important; }
+h2 { font-family: 'Playfair Display', serif !important; font-weight: 900; color: rgb(28, 28, 28); font-size: 74px; text-align: left; margin: 0 !important; line-height: 01 !important; padding-top: 10px !important; }
 h3 { font-weight: 600; color: rgba(34, 34, 34, 0.95); font-size: 16pt; }
 h4 { font-size: 13pt; }
 h5 { font-size: 14pt;
@@ -17,7 +17,7 @@ h6 {
      display: block; 
      padding-top: 1px; 
      margin-bottom: 0; 
-     font-family: 'Domine', serif !important;
+     font-family: 'Playfair Display', serif !important;
      font-size: 13pt; 
      font-weight: 700;
 }
@@ -69,16 +69,48 @@ div[class^="col-"] {
 .position-static {
   position: static;
 }
-.background-white { background: rgba(255, 255, 255, 1); }
+.background-white { background: rgb(255, 255, 255); }
 .background-trans-white { 
                      background: linear-gradient(180deg, 
-                       rgba(255,255,255, 0.7),
-                       rgba(255,255,255, 0.96),
-                       rgba(255,255,255, 0.96),
+                       rgba(255,255,255, 0.6),
+                       rgba(255,255,255, 0.97),
+                       rgba(255,255,255, 0.97),
                        rgba(255,255,255, 1));
                      }
 .background-gray { background: #434242; }
 .background-trans-gray { background: rgba(25,25,25, 0.9); }
+
+.bg-image {
+  background: no-repeat center right fixed url(../images/nyc-02.jpg); 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #ffffff;
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nyc-02.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nyc-02.jpg', sizingMethod='scale');
+  
+  margin: 0;
+  padding: 0;
+}
+
+.bg-image2 {
+  background: no-repeat center right fixed url(../images/mtfujifromsea.jpg); 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #ffffff;
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mtfujifromsea', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mtfujifromsea', sizingMethod='scale');
+  
+  margin: 0;
+  padding: 0;
+}
 
 .height-full {
   height: 100vh;
@@ -147,22 +179,6 @@ div[class^="col-"] {
   font-weight: 300;
 }
 
-.bg-image {
-  background: no-repeat center right fixed url(../images/nyc-02.jpg); 
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #ffffff;
-  
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nyc-02.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nyc-02.jpg', sizingMethod='scale');
-  
-  margin: 0;
-  padding: 0;
-}
-
 .vertical-padding {
   height: 10px;
 }
@@ -188,9 +204,9 @@ div[class^="col-"] {
 .jumbotron .container > * { text-align: center; color: #FFFFFF; }
 .jumbotron .container .lead { font-size: 28px; }
 .jumbotron .scroll-down { height: 80px; width: 110px; display: block; position: absolute; bottom: 0px; text-align: center; background-color: transparent; z-index: 6; }
-.jumbotron .scroll-down .glyphicon { 
+.jumbotron .scroll-down .fa-chevron-down { 
   color: #FFFFFF; 
-  font-size: 30px; 
+  font-size: 26pt; 
   padding-right: 2px; 
   padding-top: 20px; 
   
@@ -200,7 +216,7 @@ div[class^="col-"] {
   animation-iteration-count: infinite;
   animation-direction: normal;
 }
-.jumbotron .scroll-down:hover .glyphicon { padding-top: 25px; }
+.jumbotron .scroll-down:hover .fa-chevron-down { padding-top: 25px; }
 
 
 /* ******************* NAVBAR ******************* */
@@ -494,7 +510,7 @@ text-shadow: 0px 0px 2px #000000;
 .job-details * { color: #22A39F; }
 
 .job-company {
-   font-family: 'Domine', serif !important; 
+   font-family: 'Playfair Display', serif !important; 
    font-size: 14pt;
    font-weight: 700; 
    margin-bottom: 5px;
@@ -515,7 +531,7 @@ text-shadow: 0px 0px 2px #000000;
    display: block; 
    padding-top: 5px; 
    margin-bottom: 0; 
-   font-family: 'Domine', serif !important;
+   font-family: 'Playfair Display', serif !important;
    font-size: 13pt; 
    font-weight: 700;
 }
