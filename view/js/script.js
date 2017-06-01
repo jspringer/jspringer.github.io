@@ -279,12 +279,12 @@ function safariFontIssueFix(){
 
     if (is_safari || is_windows){
       $('.safari-font-fix').css('-webkit-text-stroke', '0.5px');  
-      $('h1').css('letter-spacing', '-0.8px');  
-      $('h2').css('letter-spacing', '-0.8px'); 
-      $('h3').css('letter-spacing', '-0.8px');
-      $('h4').css('letter-spacing', '-0.8px');
-      $('h5').css('letter-spacing', '-0.8px');
-      $('h6').css('letter-spacing', '-0.8px');
+      $('h1').css('letter-spacing', '-0.2px');  
+      $('h2').css('letter-spacing', '-0.2px'); 
+      $('h3').css('letter-spacing', '-0.2px');
+      $('h4').css('letter-spacing', '-0.2px');
+      $('h5').css('letter-spacing', '-0.2px');
+      $('h6').css('letter-spacing', '-0.2px');
       // $('#title').css('-webkit-text-stroke', '1px'); 
     }
 
