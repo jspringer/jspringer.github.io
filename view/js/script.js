@@ -4,6 +4,7 @@ $(document).ready(function()
 { 
   // applyHeader();
   // pageScrollToId();
+  safariFontIssueFix();
   fadeInBlock();
   hoverAnimations();
   applyNavigation(); 
@@ -209,16 +210,16 @@ function searchVersion(pstrDataString) {
 function hoverAnimations() {
       $(function() {
           $('#linkedin').hover(function(){  
-              $('.fa-linkedin').addClass('animated tada color-linkedin');     
+              $('#nav-icon-linkedin').addClass('animated tada color-linkedin');     
           },
           function(){ 
-              $('.fa-linkedin').removeClass('animated tada color-linkedin');  
+              $('#nav-icon-linkedin').removeClass('animated tada color-linkedin');  
           });
           $('#github').hover(function(){     
-              $('.fa-github-alt').addClass('animated rubberBand color-github'); 
+              $('#nav-icon-github').addClass('animated rubberBand color-github'); 
           },
           function(){ 
-              $('.fa-github-alt').removeClass('animated rubberBand color-github');  
+              $('#nav-icon-github').removeClass('animated rubberBand color-github');  
           });
           /* $('#codepen').mouseenter(function(){     
               $('.codepen').transition('jiggle');    
@@ -227,16 +228,16 @@ function hoverAnimations() {
               $('.').removeClass('teal');  
           }); */
           $('#twitter').hover(function(){     
-              $('.fa-twitter').addClass('animated tada color-twitter');    
+              $('#nav-icon-twitter').addClass('animated tada color-twitter');    
           },
           function(){ 
-              $('.fa-twitter').removeClass('animated tada color-twitter');  
+              $('#nav-icon-twitter').removeClass('animated tada color-twitter');  
           });
           $('#music').hover(function(){     
-              $('.fa-music').addClass('animated rubberBand color-music');    
+              $('#nav-icon-music').addClass('animated rubberBand color-music');    
           },
           function(){ 
-              $('.fa-music').removeClass('animated rubberBand color-music');  
+              $('#nav-icon-music').removeClass('animated rubberBand color-music');  
           });
   });
 }
@@ -261,6 +262,33 @@ function fadeInBlock() {
     
     });
 }
+
+function safariFontIssueFix(){
+    is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+    is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+    is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    is_opera = navigator.userAgent.indexOf("Presto") > -1;
+    is_mac = (navigator.userAgent.indexOf('Mac OS') != -1);
+    is_windows = !is_mac;
+
+    if (is_chrome && is_safari){
+      is_safari=false;
+    }
+
+    if (is_safari || is_windows){
+      $('.safari-font-fix').css('-webkit-text-stroke', '0.5px');  
+      $('h1').css('letter-spacing', '-0.8px');  
+      $('h2').css('letter-spacing', '-0.8px'); 
+      $('h3').css('letter-spacing', '-0.8px');
+      $('h4').css('letter-spacing', '-0.8px');
+      $('h5').css('letter-spacing', '-0.8px');
+      $('h6').css('letter-spacing', '-0.8px');
+      // $('#title').css('-webkit-text-stroke', '1px'); 
+    }
+
+
+};
 
 (function($){
     $(window).on("load",function(){

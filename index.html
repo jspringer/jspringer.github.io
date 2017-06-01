@@ -26,7 +26,7 @@
 
   <!--   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Ubuntu+Mono|Kaushan+Script|Noto+Serif|Domine|Abril+Fatface|Fjalla+One|Lobster|Droid+Serif|Lora||Merriweather:300,400,700,900|Playfair+Display|Oswald|Raleway:100,200,300,400,500,600,700,800,900|Roboto:100,300,400,500,700,900|Roboto+Condensed|Kaushan+Script|Caveat:400,700|Dancing+Script:400,700" rel="stylesheet" type="text/css" / -->
 
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Lobster|Domine|Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Kaushan+Script|Lobster|Domine|Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -80,16 +80,16 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#about">About</a></li>
-          <li><a href="#skills-title">Skills</a></li>
-          <li><a href="#coursework">Coursework</a></li>
-          <li><a href="#job-history">Job History</a></li>  
-          <li><a href="#projects">Projects</a></li>   
-          <li><a href="#contact">Contact</a></li>
-          <li><a id="linkedin" class="bottom-nav-icons" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              <a id="github" class="bottom-nav-icons" href="https://github.com/jspringer"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a id="twitter" class="bottom-nav-icons" href="https://twitter.com/jsnspr"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a id="music" class="bottom-nav-icons" href="https://jsnspr.tumblr.com/"><i class="fa fa-music" aria-hidden="true"></i></a>
+          <li class="active safari-font-fix"><a href="#about">About</a></li>
+          <li class="safari-font-fix"><a href="#skills-title">Skills</a></li>
+          <li class="safari-font-fix"><a href="#coursework">Coursework</a></li>
+          <li class="safari-font-fix"><a href="#job-history">Job History</a></li>  
+          <li class="safari-font-fix"><a href="#projects">Projects</a></li>   
+          <li class="safari-font-fix"><a href="#contact">Contact</a></li>
+          <li><a id="linkedin" class="bottom-nav-icons" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin" id="nav-icon-linkedin" aria-hidden="true"></i></a>
+              <a id="github" class="bottom-nav-icons" href="https://github.com/jspringer"><i class="fa fa-github-alt" id="nav-icon-github" aria-hidden="true"></i></a>
+              <a id="twitter" class="bottom-nav-icons" href="https://twitter.com/jsnspr"><i class="fa fa-twitter" id="nav-icon-twitter" aria-hidden="true"></i></a>
+              <a id="music" class="bottom-nav-icons" href="https://jsnspr.tumblr.com/"><i class="fa fa-music"  id="nav-icon-music"aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>
@@ -141,10 +141,8 @@
         
         <p class="intro-p fadeInBlock">Proficiency level for each skill varies depending on the complexity and the amount of time spent working with it. Anything in curly braces {} I am still in the early stages of learning.</p>
         
-        <div class="row fadeInBlock">
-            
+        <div class="row">
           <div class="col-md-3">
-
             <h4>Web</h4>
             <ul class="no-bullets">
             
@@ -228,11 +226,11 @@
                 <span class="skill"><a href="https://www.mongodb.com/">MongoDB</a></span>
               </li>
 
-
             </ul>
           </div>
-          <div class="col-md-3">
 
+
+          <div class="col-md-3">
             <h4>Java, Mobile, Other</h4>
             <ul class="no-bullets">
 
@@ -339,12 +337,9 @@
               <li>
                 <span class="skill"><a href="http://www.scrumguides.org/">SCRUM</a></span>
               </li>
-
-
               
             </ul>
           </div>
-
 
           <div class="col-md-3">
             <h4>Tools</h4>
@@ -465,14 +460,14 @@
         <p class="intro-p fadeInBlock">Website names link to my profile when available, otherwise directly to their main page. The GitHub icon (<i class="fa fa-github-alt" aria-hidden="true"></i>) links to the related coursework on my <a href="https://github.com/jspringer">GitHub account</a>. The Codepen icon (<i class="fa fa-codepen" aria-hidden="true"></i>) links to my <a href="https://codepen.io/jspringer/">Codepen projects</a>.</p>
 
         <div class="courses-outer">
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://app.pluralsight.com/profile/jason-springer">Pluralsight</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/pluralsight"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -481,7 +476,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Mobile</h4>
             </div>
@@ -490,7 +485,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Java</h4>
             </div>
@@ -499,7 +494,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Other Languages</h4>
             </div>
@@ -508,7 +503,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Computer Science & Programming</h4>
             </div>
@@ -518,7 +513,7 @@
           </div>
 
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">UX & Design</h4>
             </div>
@@ -528,7 +523,7 @@
           </div>
 
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Other</h4>
             </div>
@@ -538,15 +533,15 @@
           </div>
          </div>
           
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://www.udemy.com/">Udemy</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/udemy"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup></h3>
             </div>
           </div>
 
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -557,14 +552,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://www.edx.org/school/harvardx">Harvard/edX</a></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Computer Science & Programming</h4>
             </div>
@@ -574,14 +569,14 @@
           </div>
          </div>
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://www.freecodecamp.com/jspringer">FreeCodeCamp</a> <sup><a href="http://codepen.io/jspringer/"><i class="fa fa-codepen" aria-hidden="true"></i></a></sup></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -591,14 +586,14 @@
           </div>
          </div>
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://www.codeschool.com/users/jspringer">Code School</a></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -607,7 +602,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Other</h4>
             </div>
@@ -618,14 +613,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://teamtreehouse.com/jasonspringer">Team Treehouse</a></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -635,7 +630,7 @@
           </div>
 
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Mobile</h4>
             </div>
@@ -645,14 +640,14 @@
           </div>
          </div>
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://www.codecademy.com/jsnspringer">Codecademy</a></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -661,7 +656,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Other</h4>
             </div>
@@ -672,14 +667,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://learn.co/jspringer">Flatiron School / Learn.co</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/learn.co"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup> <sup class="small-text">(account needed to see my profile, <a href="">screenshot</a>)</sup></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -688,7 +683,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Mobile</h4>
             </div>
@@ -699,14 +694,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://nodeschool.io/">Nodeschool</a> <sup><a href="https://github.com/jspringer/coursework/tree/master/nodeschool"><i class="fa fa-github-alt" aria-hidden="true"></i></a></sup></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -717,14 +712,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
+         <div class="courses-block fadeInBlock fadeInBlock">
           <div class="courses-header row">
             <div class="col-md-12">
               <h3><a href="https://generalassemb.ly/">General Assembly</a></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -733,7 +728,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Python & Data Science</h4>
             </div>
@@ -742,7 +737,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">UX & Design</h4>
             </div>
@@ -753,14 +748,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3><a href="https://www.fullstackacademy.com/">Fullstack Academy</a></h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Web</h4>
             </div>
@@ -771,14 +766,14 @@
          </div>
 
 
-         <div class="courses-block fadeInBlock">
-          <div class="courses-header row">
+         <div class="courses-block">
+          <div class="courses-header row fadeInBlock">
             <div class="col-md-12">
               <h3>Books</h3>
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Java</h4>
             </div>
@@ -787,7 +782,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">Computer Science & Programming</h4>
             </div>
@@ -796,7 +791,7 @@
             </div>
           </div>
 
-          <div class="courses row">
+          <div class="courses row fadeInBlock">
             <div class="col-md-2">
               <h4 class="text-right">UX & Design</h4>
             </div>
@@ -934,22 +929,22 @@
             <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbxFlwJpKxBM1383hVHMXHomXCRJS8dh27H5YgJXgSdg9znf2lk/exec">
 
               <div class="form-group">
-                <label for="form-name"><h4>Name</h4></label>
+                <label for="form-name"><p>Name</p></label>
                 <input type="text" name="name" class="form-control" id="form-name" placeholder="Name" required>
               </div>
 
               <div class="form-group">
-                <label for="form-email"><h4>Email</h4></label>
+                <label for="form-email"><p>Email</p></label>
                 <input type="email" name="email" class="form-control" id="form-email" placeholder="Email" required>
               </div>
 
               <div class="form-group">
-                <label for="form-company"><h4>Company</h4></label>
+                <label for="form-company"><p>Company</p></label>
                 <input type="text" name="company" class="form-control" id="form-company" placeholder="Company (optional)">
               </div>
 
               <div class="form-group">
-                <label for="form-message"><h4>Message</h4></label>
+                <label for="form-message"><p>Message</p></label>
                   <textarea name="message" class="form-control" rows="7" id="form-message" placeholder="Message" required></textarea>
               </div>
 
@@ -984,7 +979,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Your browser is out of date</h4>
+            <p class="modal-title">Your browser is out of date</p>
           </div>
           <div class="modal-body">
             <p>To get the best possible experience using our site we recommend that you upgrade to a modern web browser. To download a newer web browser click on the Upgrade button.</p>
