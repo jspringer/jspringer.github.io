@@ -44,6 +44,7 @@
     <!-- ************* TOP START ************* --> 
 
     <div id="top" class="jumbotron height-full bg-image" data-position="center right">
+     <div class="fadeOutOnScrollDown">
       <div class="container" id="title-container">
         <h1 id="title" class="animated fadeInDown">Jason Springer</h1>
           <div class="container-fluid animated fadeInUp" id="icons-top">
@@ -57,9 +58,12 @@
           </div>
       </div>
       
-      <a href="#about" rel="m_PageScroll2id" class="scroll-down"> 
-        <span class="glyphicon glyphicon-chevron-down"></span>
-      </a>
+      <div class="text-center">
+        <p><a href="#about" rel="m_PageScroll2id" class="scroll-down"> 
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </a></p>
+      </div>
+     </div>
     </div>
 
     <!-- ************* TOP END ************* --> 
@@ -112,7 +116,7 @@
           </div>
           <div class="col-md-7">
             <p>Hi there, </p>
-            <p>I'm Jason, a self-taught fullstack developer based in Brooklyn, NY. <a href="#coursework">Scroll down</a> to see a list of the courses I have completed and visit my <a href="https://github.com/jspringer/coursework">Github page</a> for the corresponding coursework.</p>
+            <p>I'm Jason, a fullstack developer based in Brooklyn, NY. <a href="#coursework">Scroll down</a> to see a list of the courses I have completed and visit my <a href="https://github.com/jspringer/coursework">Github page</a> for the corresponding coursework.</p>
             <p>Before embarking on becoming a developer, I was a Customer Support Engineer for the marketing tech company <a href="http://www.sailthru.com/">Sailthru</a> and prior to that, a Software Product Specialist for the 3d printing company <a href="https://www.makerbot.com/">MakerBot Industries</a>.</p>
             <p>For more details about my work and education history, please visit my <a href="https://www.linkedin.com/in/jhspringer">LinkedIn profile</a> or send me an <a href="#contact">email</a> for a copy of my resume.</p>  
           </div>
@@ -415,11 +419,15 @@
               </li>
 
               <li>
+                <span class="skill"><a href="https://www.google.com/analytics/">Google Analytics</a></span>
+              </li>
+
+              <li>
                 <span class="skill"><a href="https://en.wikipedia.org/wiki/Google_Docs%2C_Sheets_and_Slides">Google Docs, Sheets, & Slides</a></span>
               </li>
 
               <li>
-                <span class="skill"><a href="">Microsoft Office</a></span>
+                <span class="skill"><a href="https://www.office.com/">Microsoft Office</a></span>
               </li>
 
               <li>
@@ -926,7 +934,7 @@
             <div class="form-thankyou" id="thankyou_message">
               <p><i class="fa fa-check green" aria-hidden="true"></i> Thank you! I will return your message soon.</p>
             </div>
-            <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbxFlwJpKxBM1383hVHMXHomXCRJS8dh27H5YgJXgSdg9znf2lk/exec">
+            <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbzhjUD5zX1-3W-GeGLlMT1hOFMRaivyycDQwxgBzVBir0rzP9Y/exec">
 
               <div class="form-group">
                 <label for="form-name"><p>Name</p></label>
@@ -1015,6 +1023,15 @@
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="view/js/jquery.malihu.PageScroll2id.min.js"></script>
     <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100333748-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
     <!-- script 
     src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 

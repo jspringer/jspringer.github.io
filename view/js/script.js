@@ -12,6 +12,7 @@ $(document).ready(function()
   applyResize();
   checkHash();
   checkBrowser();
+  fadeOutOnScrollDown();
 
 });
 
@@ -287,8 +288,18 @@ function safariFontIssueFix(){
       // $('#title').css('-webkit-text-stroke', '1px'); 
     }
 
+}
 
-};
+function fadeOutOnScrollDown() {
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+
+    $('.fadeOutOnScrollDown').css({
+        'opacity': ((height - scrollTop) / height)
+    }); 
+  });
+}
 
 (function($){
     $(window).on("load",function(){

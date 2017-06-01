@@ -97,6 +97,10 @@ div[class^="col-"] {
 
 }
 
+.width-full {
+  width: 100%;
+}
+
 .italic {
   font-style: italic;
 }
@@ -183,7 +187,7 @@ div[class^="col-"] {
 .jumbotron .container { position: relative; z-index: 4; text-align: center; margin: 0; padding: 0; }
 .jumbotron .container > * { text-align: center; color: #FFFFFF; }
 .jumbotron .container .lead { font-size: 28px; }
-.jumbotron .scroll-down { height: 80px; width: 110px; display: block; position: absolute; bottom: 0px; text-align: center; background-color: transparent; text-align: center; z-index: 6; }
+.jumbotron .scroll-down { height: 80px; width: 110px; display: block; position: absolute; bottom: 0px; text-align: center; background-color: transparent; z-index: 6; }
 .jumbotron .scroll-down .glyphicon { 
   color: #FFFFFF; 
   font-size: 30px; 
@@ -274,7 +278,7 @@ div[class^="col-"] {
 
 #top:before {
     content: "";
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
     bottom: 0;
