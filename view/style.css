@@ -195,17 +195,6 @@ div[class^="col-"] {
 
 /* ******************* BOOTSTRAP MODS ******************* */
 
-.jumbotron {
-    height: 100vh;
-  height: 100%;
-  vertical-align: middle;
-      display:flex;
-      display-direction:column;
-      justify-content:center;
-      align-items:center;
-  width: 100%;
-}
-
 .container { max-width: 100%; padding: 0 10px 15px 195px; margin: 0;}
 
 /* .btn-primary { background-color: #0275d8; border-color: #0072c7; }
