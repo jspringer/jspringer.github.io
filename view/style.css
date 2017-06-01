@@ -195,6 +195,17 @@ div[class^="col-"] {
 
 /* ******************* BOOTSTRAP MODS ******************* */
 
+.jumbotron {
+    height: 100vh;
+  height: 100%;
+  vertical-align: middle;
+      display:flex;
+      display-direction:column;
+      justify-content:center;
+      align-items:center;
+  width: 100%;
+}
+
 .container { max-width: 100%; padding: 0 10px 15px 195px; margin: 0;}
 
 /* .btn-primary { background-color: #0275d8; border-color: #0072c7; }
@@ -203,8 +214,8 @@ div[class^="col-"] {
 .jumbotron .container { position: relative; z-index: 4; text-align: center; margin: 0; padding: 0; }
 .jumbotron .container > * { text-align: center; color: #FFFFFF; }
 .jumbotron .container .lead { font-size: 28px; }
-.jumbotron .scroll-down { height: 80px; width: 110px; display: block; position: absolute; bottom: 0px; text-align: center; background-color: transparent; z-index: 6; }
-.jumbotron .scroll-down .fa-chevron-down { 
+.scroll-down { height: 70px; display:block; position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; background-color: transparent; z-index: 6; }
+.scroll-down .fa-chevron-down { 
   color: #FFFFFF; 
   font-size: 26pt; 
   padding-right: 2px; 
@@ -216,7 +227,13 @@ div[class^="col-"] {
   animation-iteration-count: infinite;
   animation-direction: normal;
 }
-.jumbotron .scroll-down:hover .fa-chevron-down { padding-top: 25px; }
+.scroll-down:hover .fa-chevron-down { padding-top: 25px; }
+
+/* .down-arrow {
+  width: 100% !important;
+  text-align: center !important;
+  align-items: center;
+} */
 
 
 /* ******************* NAVBAR ******************* */
