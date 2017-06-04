@@ -2,18 +2,14 @@ var lnStickyNavigation;
 
 $(document).ready(function()
 { 
-  // applyHeader();
-  // pageScrollToId();
   safariFontIssueFix();
   fadeInBlock();
-  hoverAnimations();
-  applyNavigation(); 
+  applyNavigation();
+  fadeOutOnScrollDown(); 
   applyMailTo();
   applyResize();
   checkHash();
   checkBrowser();
-  fadeOutOnScrollDown();
-
 });
 
 /* HEADER FUNCTIONS */
@@ -25,45 +21,12 @@ function applyHeader()
   lazyLoad($('.jumbotron'));
 } 
 
-function lazyLoad(poContainer)
-{
-  /*var lstrSource   = poContainer.attr('data-src');
-  var lstrPosition = poContainer.attr('data-position');
-
-  $('<img>').attr('src', lstrSource).load(function()
-  {
-    poContainer.css('background-image', 'url("'+ lstrSource +'")');
-    poContainer.css('background-position', lstrPosition);
-    poContainer.css('-ms-filter', '"progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'' + lstrSource + '\', sizingMethod=\'scale\')"');
-    poContainer.css('filter', 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'' + lstrSource + '\', sizingMethod=\'scale\'');
-  });*/
-}
-
 /* NAVIGATION FUNCTIONS */
 
 function applyNavigation()
 {
-  // applyClickEvent();
   applyNavigationFixForPhone();
-  // applyScrollSpy(); 
   applyStickyNavigation();
-}
-
-function applyClickEvent()
-{
-  $('a[href*=#]').on('click', function(e)
-  {
-    e.preventDefault();
-    
-    if( $( $.attr(this, 'href') ).length > 0 )
-    {
-      $('html, body').animate(
-      {
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 400);
-    }
-    return false;
-  });
 }
 
 function applyNavigationFixForPhone()
@@ -71,14 +34,6 @@ function applyNavigationFixForPhone()
   $('.navbar li a').click(function(event) 
   {
     $('.navbar-collapse').removeClass('in').addClass('collapse');
-  });
-}
-
-function applyScrollSpy()
-{
-  $('#navbar-example').on('activate.bs.scrollspy', function() 
-  {
-    window.location.hash = $('.nav .active a').attr('href').replace('#', '#/');
   });
 }
 
@@ -94,8 +49,7 @@ function applyStickyNavigation()
   stickyNavigation();
 }
 
-function stickyNavigation()
-{         
+function stickyNavigation() {         
   if($(window).scrollTop() > lnStickyNavigation) 
   {   
     $('body').addClass('fixed');  
@@ -108,8 +62,7 @@ function stickyNavigation()
 
 /* MAILTO FUNCTION */
 
-function applyMailTo()
-{
+function applyMailTo() {
   $('a[href*=mailto]').on('click', function(e)
   {
     var lstrEmail = $(this).attr('href').replace('mailto:', '');
@@ -142,6 +95,34 @@ function checkHash()
   {
     $('a[href='+ lstrHash +']').trigger('click');
   }
+}
+
+/* SAFARI FONT ISSUE FIX FUNCTION */
+
+function safariFontIssueFix(){
+    is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+    is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+    is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    is_opera = navigator.userAgent.indexOf("Presto") > -1;
+    is_mac = (navigator.userAgent.indexOf('Mac OS') != -1);
+    is_windows = !is_mac;
+
+    if (is_chrome && is_safari){
+      is_safari=false;
+    }
+
+    if (is_safari || is_windows){
+      $('.safari-font-fix').css('-webkit-text-stroke', '0.5px');  
+      $('h1').css('letter-spacing', '-0.2px');  
+      $('h2').css('letter-spacing', '-0.2px'); 
+      $('h3').css('letter-spacing', '-0.2px');
+      $('h4').css('letter-spacing', '-0.2px');
+      $('h5').css('letter-spacing', '-0.2px');
+      $('h6').css('letter-spacing', '-0.2px');
+      // $('#title').css('-webkit-text-stroke', '1px'); 
+    }
+
 }
 
 /* IE7- FALLBACK FUNCTIONS */
@@ -196,52 +177,30 @@ function searchString(paData)
     }
   }
 }
-  
-function searchVersion(pstrDataString) {
-  var lnIndex = pstrDataString.indexOf(this.versionSearchString);
-  
-  if(lnIndex == -1) 
-  {
-    return;
-  }
-  
-  return parseFloat(pstrDataString.substring(lnIndex + this.versionSearchString.length + 1));
-} 
 
-function hoverAnimations() {
-      $(function() {
-          $('#linkedin').hover(function(){  
-              $('#nav-icon-linkedin').addClass('animated tada color-linkedin');     
-          },
-          function(){ 
-              $('#nav-icon-linkedin').removeClass('animated tada color-linkedin');  
-          });
-          $('#github').hover(function(){     
-              $('#nav-icon-github').addClass('animated rubberBand color-github'); 
-          },
-          function(){ 
-              $('#nav-icon-github').removeClass('animated rubberBand color-github');  
-          });
-          /* $('#codepen').mouseenter(function(){     
-              $('.codepen').transition('jiggle');    
-          },
-          function(){ 
-              $('.').removeClass('teal');  
-          }); */
-          $('#twitter').hover(function(){     
-              $('#nav-icon-twitter').addClass('animated tada color-twitter');    
-          },
-          function(){ 
-              $('#nav-icon-twitter').removeClass('animated tada color-twitter');  
-          });
-          $('#music').hover(function(){     
-              $('#nav-icon-music').addClass('animated rubberBand color-music');    
-          },
-          function(){ 
-              $('#nav-icon-music').removeClass('animated rubberBand color-music');  
-          });
-  });
+/* FADE OUT ON SCROLL DOWN FUNCTION */
+
+function fadeOutOnScrollDown() {
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+
+    $('#title-container, .down-arrow').css({
+        'opacity': ((height - (scrollTop*1.8)) / height)
+    }); 
+});
 }
+
+/* PAGE SCROLL TO ID FUNCTION */
+
+(function($){
+    $(window).on("load",function(){
+        $("a[rel='m_PageScroll2id']").mPageScroll2id({ scrollSpeed: 1200 });
+    });
+})(jQuery);
+
+
+/* FADE IN DIV BLOCK FUNCTION */
 
 function fadeInBlock() {
   $(window).scroll( function(){
@@ -252,57 +211,14 @@ function fadeInBlock() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
-            bottom_of_window = bottom_of_window + 300;  
+            bottom_of_window = bottom_of_window + 100;  
           
             if( bottom_of_window > bottom_of_object ){
                 
-                $(this).animate({'opacity':'1'},600);
+                $(this).animate({'opacity':'1'},500);
                     
             }
         }); 
     
     });
 }
-
-function safariFontIssueFix(){
-    is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-    is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
-    is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
-    is_safari = navigator.userAgent.indexOf("Safari") > -1;
-    is_opera = navigator.userAgent.indexOf("Presto") > -1;
-    is_mac = (navigator.userAgent.indexOf('Mac OS') != -1);
-    is_windows = !is_mac;
-
-    if (is_chrome && is_safari){
-      is_safari=false;
-    }
-
-    if (is_safari || is_windows){
-      $('.safari-font-fix').css('-webkit-text-stroke', '0.5px');  
-      $('h1').css('letter-spacing', '-0.2px');  
-      $('h2').css('letter-spacing', '-0.2px'); 
-      $('h3').css('letter-spacing', '-0.2px');
-      $('h4').css('letter-spacing', '-0.2px');
-      $('h5').css('letter-spacing', '-0.2px');
-      $('h6').css('letter-spacing', '-0.2px');
-      // $('#title').css('-webkit-text-stroke', '1px'); 
-    }
-
-}
-
-function fadeOutOnScrollDown() {
-  $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    var height = $(window).height();
-
-    $('.fadeOutOnScrollDown').css({
-        'opacity': ((height - scrollTop) / height)
-    }); 
-  });
-}
-
-(function($){
-    $(window).on("load",function(){
-        $("a[rel='m_PageScroll2id']").mPageScroll2id({ scrollSpeed: 1200 });
-    });
-})(jQuery);
