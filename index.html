@@ -26,7 +26,7 @@
 
   <!--   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Ubuntu+Mono|Kaushan+Script|Noto+Serif|Domine|Abril+Fatface|Fjalla+One|Lobster|Droid+Serif|Lora||Merriweather:300,400,700,900|Playfair+Display|Oswald|Raleway:100,200,300,400,500,600,700,800,900|Roboto:100,300,400,500,700,900|Roboto+Condensed|Kaushan+Script|Caveat:400,700|Dancing+Script:400,700" rel="stylesheet" type="text/css" / -->
 
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Domine|Roboto:100,300,500|Lato:900|Playfair+Display:700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Domine|Roboto:100,300,500|Lato:900|Merriweather:700" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -41,6 +41,41 @@
 
   <body data-spy="scroll" data-target="#navbar-example">   
     
+    
+    <!-- ************* NAVBAR START ************* --> 
+
+    <nav class="navbar navbar-default" id="navbar-example" role="navigation">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active safari-font-fix"><a href="#about">About</a></li>
+          <li class="safari-font-fix"><a href="#skills-title">Skills</a></li>
+          <li class="safari-font-fix"><a href="#coursework">Coursework</a></li>
+          <li class="safari-font-fix"><a href="#job-history">Job History</a></li>  
+          <li class="safari-font-fix"><a href="#projects">Projects</a></li>   
+          <li class="safari-font-fix"><a href="#contact">Contact</a></li>
+          <li class="text-center"><a id="linkedin" class="bottom-nav-icons" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin" id="nav-icon-linkedin" aria-hidden="true"></i></a>
+              <a id="github" class="bottom-nav-icons" href="https://github.com/jspringer"><i class="fa fa-github-alt" id="nav-icon-github" aria-hidden="true"></i></a>
+              <a id="twitter" class="bottom-nav-icons" href="https://twitter.com/jsnspr"><i class="fa fa-twitter" id="nav-icon-twitter" aria-hidden="true"></i></a>
+              <a id="music" class="bottom-nav-icons" href="https://jsnspr.tumblr.com/"><i class="fa fa-music" id="nav-icon-music" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ************* NAVBAR END ************* --> 
+
+
+
     <!-- ************* TOP START ************* --> 
 
     <div id="top" class="jumbotron height-full bg-image" data-position="center right">
@@ -68,53 +103,19 @@
 
     <!-- ************* TOP END ************* --> 
 
-
-    <!-- ************* NAVBAR START ************* --> 
-
-    <nav class="navbar navbar-default" id="navbar-example" role="navigation">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active safari-font-fix"><a href="#about">About</a></li>
-          <li class="safari-font-fix"><a href="#skills-title">Skills</a></li>
-          <li class="safari-font-fix"><a href="#coursework">Coursework</a></li>
-          <li class="safari-font-fix"><a href="#job-history">Job History</a></li>  
-          <li class="safari-font-fix"><a href="#projects">Projects</a></li>   
-          <li class="safari-font-fix"><a href="#contact">Contact</a></li>
-          <li><a id="linkedin" class="bottom-nav-icons" href="https://www.linkedin.com/in/jhspringer"><i class="fa fa-linkedin" id="nav-icon-linkedin" aria-hidden="true"></i></a>
-              <a id="github" class="bottom-nav-icons" href="https://github.com/jspringer"><i class="fa fa-github-alt" id="nav-icon-github" aria-hidden="true"></i></a>
-              <a id="twitter" class="bottom-nav-icons" href="https://twitter.com/jsnspr"><i class="fa fa-twitter" id="nav-icon-twitter" aria-hidden="true"></i></a>
-              <a id="music" class="bottom-nav-icons" href="https://jsnspr.tumblr.com/"><i class="fa fa-music" id="nav-icon-music" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- ************* NAVBAR END ************* --> 
-
-
     <!-- ************* MAIN START ************* --> 
 
     <!-- ************* ABOUT START ************* --> 
 
-    <div id="about" class="height-full bg-image">
+    <div id="about" class="bg-image">
      <div id="about2" class="background-trans-white height-full">
-      <div class="container fadeInBlock">
+      <div class="container">
 
         <div class="row">
-          <div class="col-md-4 text-left">
-            <img src="images/brooklynbridgepark-square-1084x1084.png" class="img-rounded" alt="Jason Springer" />
+          <div class="col-md-4 text-center fadeInBlock" id="about-img-block">
+            <img src="images/brooklynbridgepark-square-1084x1084.png" class="img-rounded" alt="Jason Springer" id="about-img" />
           </div>
-          <div class="col-md-7">
+          <div class="col-md-7 fadeInBlock" id="about-intro">
             <p>Hi there, </p>
             <p>I'm Jason, a fullstack developer based in Brooklyn, NY. <a href="#coursework">Scroll down</a> to see a list of the courses I have completed and visit my <a href="https://github.com/jspringer/coursework">Github page</a> for the corresponding coursework.</p>
             <p>Before embarking on becoming a developer, I was a Customer Support Engineer for the marketing tech company <a href="http://www.sailthru.com/">Sailthru</a> and prior to that, a Software Product Specialist for the 3d printing company <a href="https://www.makerbot.com/">MakerBot Industries</a>.</p>
@@ -147,8 +148,8 @@
         
         <div class="row">
           <div class="col-md-3">
-            <h4>Web</h4>
-            <ul class="no-bullets">
+            <h4 data-toggle="collapse" data-target="#skills-list-web">Web</h4>
+            <ul class="no-bullets collapse in" id="skills-list-web">
             
               <li>
                 <span class="skill"><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a></span>
@@ -235,8 +236,8 @@
 
 
           <div class="col-md-3">
-            <h4>Java, Mobile, Other</h4>
-            <ul class="no-bullets">
+            <h4 data-toggle="collapse" data-target="#skills-list-other">Java, Mobile, Other</h4>
+            <ul class="no-bullets collapse in" id="skills-list-other">
 
               <li>
                 <span class="skill"><a href="https://www.python.org/">Python 2.7 & 3.6</a></span>
@@ -275,8 +276,8 @@
 
 
           <div class="col-md-3">
-            <h4>General</h4>
-            <ul class="no-bullets">
+            <h4 data-toggle="collapse" data-target="#skills-list-general">General</h4>
+            <ul class="no-bullets collapse in" id="skills-list-general">
               
               <li>
                 <span class="skill"><a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash (Command Line)</a></span>
@@ -346,8 +347,8 @@
           </div>
 
           <div class="col-md-3">
-            <h4>Tools</h4>
-            <ul class="no-bullets">
+            <h4 data-toggle="collapse" data-target="#skills-list-tools">Tools</h4>
+            <ul class="no-bullets collapse in" id="skills-list-tools">
               
 
               <li>
