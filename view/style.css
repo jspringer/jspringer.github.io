@@ -867,14 +867,16 @@ div[class^="col-"] {
 }    
 
 @media only screen and (orientation: portrait) and (max-width: 767px)  {
-/*.bg-image {
+bg-image {
       -webkit-background-size: auto 150%;
-      background-attachment: fixed;
-    } */
+      background-attachment: scroll;
+    } 
 
     .container { 
   padding: 0 20px 15px 20px; 
 }
+
+
 
 
 }

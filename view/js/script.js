@@ -246,3 +246,12 @@ function slideInOnScrollDown() {
     
     });
 }
+
+/* */
+
+function fixedBgImageOnMobileFix() {
+  $(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('#top').css('background-position', 'left ' + ((scrolledY)) + 'px');
+});
+}
