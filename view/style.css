@@ -866,10 +866,10 @@ div[class^="col-"] {
 }    
 
 @media only screen and (orientation: portrait) and (max-width: 767px)  {
-    .jumbotron {
+ /*   .jumbotron {
       -webkit-background-size: auto 150%;
       background-attachment: fixed;
-    }
+    } */
 
     .container { 
   padding: 0 20px 15px 20px; 
