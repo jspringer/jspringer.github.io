@@ -172,7 +172,6 @@ div[class^="col-"] {
   
   margin: 0;
   padding: 0;
-  z-index: -1;
 }
 
 .bg-image2 {
@@ -867,7 +866,7 @@ div[class^="col-"] {
 }    
 
 @media only screen and (orientation: portrait) and (max-width: 767px)  {
-bg-image {
+.bg-image {
       -webkit-background-size: auto 150%;
       background-attachment: scroll;
     } 
