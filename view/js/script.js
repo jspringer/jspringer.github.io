@@ -3,7 +3,6 @@ var lnStickyNavigation;
 $(document).ready(function()
 { 
   safariFontIssueFix();
-  fixedBgImageOnMobileFix();
   fadeInBlock();
   applyNavigation();
   fadeOutOnScrollDown(); 
@@ -246,13 +245,4 @@ function slideInOnScrollDown() {
         }); 
     
     });
-}
-
-/* */
-
-function fixedBgImageOnMobileFix() {
-  $(window).scroll(function() {
-  var scrolledY = $(window).scrollTop();
-  $('#top').css('background-position', 'left ' + ((scrolledY)) + 'px');
-});
 }
