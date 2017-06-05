@@ -3,6 +3,7 @@ var lnStickyNavigation;
 $(document).ready(function()
 { 
   safariFontIssueFix();
+  fixedBgImageOnMobileFix();
   fadeInBlock();
   applyNavigation();
   fadeOutOnScrollDown(); 
