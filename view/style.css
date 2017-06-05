@@ -574,6 +574,10 @@ div[class^="col-"] {
   margin-bottom: 20px;
 }
 
+.courses h4 {
+    text-align: right;
+}
+
 .courses { 
   margin-top: 8px; 
   margin-bottom: 8px; 
@@ -709,10 +713,19 @@ div[class^="col-"] {
 
 .kxcd {
   background-color: #fff;
-  padding: 15px;
-  margin-top: 29px;
-  margin-left: 50px;
+  margin: 29px 15px 0 15px;
   border-radius: 20px;
+    max-width: 400px;
+        padding: 15px;
+}
+
+.kxcd img {
+
+    width: 100%;
+} 
+
+.form-block {
+  margin-right: 35px;
 }
 
 .form-thankyou {
@@ -811,6 +824,10 @@ div[class^="col-"] {
   padding-bottom: 20px !important;
 }
 
+.courses h4 {
+    text-align: left !important;
+}
+
 }
 
 @media (max-width: 767px) { 
@@ -861,13 +878,15 @@ div[class^="col-"] {
   text-align: center !important;
 }
 
-
+.kxcd {
+  margin-right: 50px;
+}
 
 }    
 
 @media only screen and (orientation: portrait) and (max-width: 767px)  {
 .bg-image {
-      -webkit-background-size: auto 150%;
+    /*  -webkit-background-size: auto 150%; */
       background-attachment: scroll;
     } 
 
