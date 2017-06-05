@@ -414,6 +414,10 @@ div[class^="col-"] {
   animation: 1s linear normal tada;
 }
 
+#navbar-brand {
+  display: none;
+}
+
 
 /* ******************* TOP ******************* */
 
@@ -841,8 +845,8 @@ div[class^="col-"] {
   .jumbotron .scroll-down { width: 100%; right: 0px; }
   
   .navbar  { left: 0px; width: 100%;   background-color: rgba(25,25,25, 0.95); }
-  .navbar .nav > li { height: 60px; }
-  .navbar .nav > li a { height: 60px; text-align: center; padding-top: 20px; font-weight: 100; color: #FFFFFF; }
+  .navbar .nav > li { height: 50px; }
+  .navbar .nav > li a { height: 50px; text-align: center; padding-top: 10px; font-weight: 100; color: #FFFFFF; }
   
   .fixed .navbar { top: 0px; }
   
@@ -880,6 +884,11 @@ div[class^="col-"] {
 
 .kxcd {
   margin-right: 50px;
+}
+
+#navbar-brand {
+  display: inline;
+  color: #dddddd;
 }
 
 }    
