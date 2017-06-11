@@ -1131,6 +1131,10 @@ background-image: linear-gradient(30deg,#f9d423,#ff4e50);
     opacity: 100;
   }
 
+  #contact .row .fadeInBlock {
+    opacity: 100;
+  }
+
 
 }
 @media only screen and (orientation: landscape) and (max-width: 767px)  {
