@@ -1,0 +1,926 @@
+/* ******************* BODY ELEMENTS ******************* */
+
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  background: #ffffff; 
+  font-size: 14pt; 
+  line-height: 1.65; 
+  color: #434242; 
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; 
+  font-weight: 300 !important; 
+  text-rendering:optimizeLegibility; 
+  -webkit-font-smoothing: subpixel-antialiased; 
+}
+ 
+h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6, strong, b { 
+  font-family: 'Merriweather', serif !important; 
+  margin-bottom: 0; 
+}
+
+h1,h4 { 
+  font-weight: 700; 
+  margin-bottom: 10px; 
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive !important;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 160pt !important;
+}
+
+h2 { 
+  font-family: 'Lato', sans-serif !important; 
+  font-weight: 900; 
+  color: rgb(28, 28, 28); 
+  font-size: 80px; 
+  text-align: left; 
+  margin: 0 !important; 
+  line-height: 0.7 !important; 
+  padding-top: 15px !important; 
+    padding-bottom: 0 !important; 
+  text-transform: uppercase;
+}
+
+h3 { 
+  font-weight: 600; 
+  color: rgba(34, 34, 34, 0.95); 
+  font-size: 16pt; 
+}
+
+h4 { 
+  font-size: 12pt;
+}
+
+h5 { 
+  font-size: 14pt;
+  font-weight: 700; 
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h6 { 
+  display: block; 
+  padding-top: 1px; 
+  margin-bottom: 0; 
+  font-family: 'Merriweather', serif !important;
+  font-size: 13pt; 
+  font-weight: 700;
+}
+
+p.lead { 
+  text-align: center; 
+  color: #727878; 
+}
+
+p.lead a { 
+  color: #FFFFFF; 
+  text-decoration: underline; 
+}
+
+p.lead a:hover { text-decoration: none; }
+
+ul.no-bullets { 
+  list-style-type: none; 
+  margin: 0px; 
+  padding: 0px; 
+}
+hr { 
+  margin: 40px 0px; 
+  border-color: #727878; 
+  opacity: 0.2; 
+  filter:alpha(opacity=20); 
+}
+
+input, textarea {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+input {
+  font-weight: 500 !important;
+}
+
+textarea {
+  font-weight: 300 !important;
+}
+
+/* a {
+  color: #0067b3;
+} */
+
+a:hover {
+  text-decoration: none !important;
+}
+
+/* ******************* TROUBLESHOOTING ******************* */ 
+
+/*
+ div[class="row"] {
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col-"] {
+    background-color: rgba(255, 0, 0, 0.2);
+} 
+*/
+
+/* ******************* GENERAL LAYOUT ******************* */
+
+.position-static {
+  position: static;
+}
+
+.background-white { 
+  background: rgb(255, 255, 255); 
+}
+
+.background-trans-white { 
+  background: linear-gradient(180deg, 
+  rgba(255,255,255, 0.6),
+  rgba(255,255,255, 0.97),
+  rgba(255,255,255, 0.97),
+  rgba(255,255,255, 1));
+}
+.background-gray { 
+  background: #434242; 
+}
+
+.background-trans-gray { 
+  background: rgba(25,25,25, 0.9); 
+}
+
+.background-black {
+  background-color: #000000;
+}
+
+.bg-image {
+  background: no-repeat center right fixed url(../images/nyc-02.jpg); 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #ffffff;
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nyc-02.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/nyc-02.jpg', sizingMethod='scale');
+  
+  margin: 0;
+  padding: 0;
+}
+
+.bg-image2 {
+  background: no-repeat center right fixed url(../images/mtfujifromsea.jpg); 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #ffffff;
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mtfujifromsea', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mtfujifromsea', sizingMethod='scale');
+  
+  margin: 0;
+  padding: 0;
+}
+
+.height-full {
+  height: 100vh;
+  height: 100%;
+  vertical-align: middle;
+  display:flex;
+  display-direction:column;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+}
+
+.height-full2 {
+  height: 100vh;
+  height: 100%;
+
+}
+
+.width-full {
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.small-text {
+  font-size: 8pt;
+  font-weight: 300;
+}
+
+.vertically-center {
+  display: flex;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+
+.teal {
+  color: #4c79bc !important;
+}
+
+.orange {
+  color: #b50008 !important;
+}
+
+.green {
+  color: #5cb85c !important;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.intro-p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt !important;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.vertical-padding {
+  height: 10px;
+}
+
+#bgfadein {
+  height: 100px;
+}
+
+/* ******************* JS/JQ PLUGIN RELATED ******************* */
+
+.fadeInBlock {
+    opacity:0;
+}
+
+/* ******************* BOOTSTRAP MODS ******************* */
+
+.container { 
+  max-width: 100%; 
+  padding: 0 10px 15px 195px; 
+  margin: 0;
+}
+
+.jumbotron .container { 
+  position: relative; 
+  z-index: 4; 
+  text-align: center; 
+  margin: 0; 
+  padding: 0; 
+}
+.jumbotron .container > * { 
+  text-align: center; 
+  color: #FFFFFF; 
+}
+
+.jumbotron .container .lead { 
+  font-size: 28px; 
+}
+
+.scroll-down { 
+  height: 70px; 
+  display:block; 
+  position: absolute; 
+  bottom: 20px; 
+  left: 0; 
+  right: 0; 
+  text-align: center; 
+  background-color: transparent; 
+  z-index: 6; 
+}
+
+.scroll-down .fa-chevron-down { 
+  color: #FFFFFF; 
+  font-size: 26pt; 
+  padding-right: 2px; 
+  padding-top: 20px; 
+  
+  animation-name: wiggle;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.scroll-down:hover .fa-chevron-down { 
+  padding-top: 25px; 
+}
+
+/* ******************* NAVBAR ******************* */
+
+.navbar  { 
+  border: 0px; 
+  background-color: rgba(25, 25, 25, 1); 
+  position: absolute; 
+  top: 100%; 
+  left: 20px; 
+  width: 155px; 
+  z-index: 999; 
+  box-shadow: 0.1px 0.1px 0.1px rgba(0, 0, 0, 0.5);
+}
+.navbar .navbar-collapse { 
+  padding: 0px; 
+  max-height: none; 
+}
+
+.navbar .navbar-nav { 
+  float: none; 
+}
+
+.navbar-nav { 
+  margin: 0px; 
+}
+
+.navbar .nav > li { 
+  display: block; 
+  float: none; 
+  height: 66px; 
+  padding-top: 20px; 
+} 
+
+.navbar .nav > li a { 
+  display: block; 
+  text-align: center; 
+  padding-top: 10px; 
+  font-weight: 100; 
+  font-size: 14pt; 
+  color: #fff; 
+  font-family: "Roboto"; 
+
+}
+
+.navbar .nav > li a:hover, .navbar .nav > li a:focus { 
+  color: #fff; 
+  font-weight: 300; 
+  text-decoration: none; 
+  background: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { 
+  background: transparent; 
+  color: #65bdff; 
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar { 
+  background: #222222; 
+}
+
+.bottom-nav-icons {
+  display: inline-block !important;
+  padding: 0 7px 0 7px !important;
+}
+
+.fixed .navbar  { 
+  position: fixed; 
+  top: 60px; 
+}
+
+#nav-icon-linkedin:hover {
+  color: #0077b5;
+  animation: 1s linear normal tada;
+}
+
+#nav-icon-github:hover {
+  color: #c9510c;
+  animation: 1s linear normal tada;
+}
+
+#nav-icon-twitter:hover {
+  color: #1da1f2;
+  animation: 1s linear normal tada;
+}
+
+#nav-icon-music:hover {
+  color: rgb(30,215,96);
+  animation: 1s linear normal tada;
+}
+
+#navbar-brand {
+  display: none;
+}
+
+
+/* ******************* TOP ******************* */
+
+#top:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* #title {
+  font-family: 'Amatic SC', cursive !important;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 160pt;
+  font-weight: 700;
+} */
+
+#title-padding {
+  padding-top: 80px;
+}
+
+#icons-top {
+  margin-top: 12px;
+  font-size: 16pt;
+}
+
+#icons-top a {
+  color: rgb(255, 255, 255) !important;
+}
+
+#top-icon-linkedin:hover {
+  -webkit-text-shadow: 0px 0px 2px #0077b5;
+  -moz-text-shadow: 0px 0px 2px #0077b5;
+  text-shadow: 0px 0px 3px #0077b5; 
+}
+
+#top-icon-github:hover {
+  -webkit-text-shadow: 0px 0px 2px #c9510c;
+  -moz-text-shadow: 0px 0px 2px #c9510c;
+  text-shadow: 0px 0px 3px #c9510c; 
+}
+
+#top-icon-twitter:hover {
+  -webkit-text-shadow: 0px 0px 2px #1da1f2;
+  -moz-text-shadow: 0px 0px 2px #1da1f2;
+  text-shadow: 0px 0px 3px #1da1f2; 
+
+}
+
+#top-icon-music:hover {
+  -webkit-text-shadow: 0px 0px 2px rgb(30,215,96);
+  -moz-text-shadow: 0px 0px 2px rgb(30,215,96);
+  text-shadow: 0px 0px 3px rgb(30,215,96); 
+}
+
+#top-icon-email:hover {
+  -webkit-text-shadow: 0px 0px 2px #ea4335;
+  -moz-text-shadow: 0px 0px 2px #ea4335;
+  text-shadow: 0px 0px 3px #ea4335; 
+} 
+
+#icons-top .fa {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.invisible {
+  display: block !important;
+}
+
+
+/* ******************* ABOUT ******************* */
+
+#about .row > div { 
+  margin-bottom: 0 !important; 
+}
+
+#about .row > div img { 
+  width: 100%; 
+  max-width: 300px; 
+}
+
+#about { 
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif; 
+  font-size: 13pt;
+  vertical-align: middle;
+  display:flex;
+  display-direction:column;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+}
+
+#about-img-block {
+  padding-top: 5px;
+}
+
+/* ******************* SKILLS ******************* */
+
+#skills-main ul > li { 
+  min-height: 30px; 
+  padding: 0; 
+}
+
+#skills-main ul > li:hover { 
+  background: #F2F2F2; 
+}
+
+#skills-main ul > li .skill { 
+  display: inline-block; 
+  width: 95%; 
+  font-size: 11pt !important; 
+}
+
+#skills-title {
+  background: linear-gradient(90deg, 
+               rgba(255,255,255, 1), 
+               rgba(255,255,255, .96),
+               rgba(255,255,255, .4)),
+               url(../images/oldprogrammingbooks2c.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/oldprogrammingbooks2c.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/oldprogrammingbooks2c.jpg', sizingMethod='scale'); 
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+
+/* ******************* COURSEWORK ******************* */
+
+#coursework { 
+  font-size: 12pt; 
+  margin-top: 100px;
+}
+
+.courses-list {
+  padding-top: 7px;
+}
+
+.courses-list p {
+  font-size: 11pt;
+  line-height: 1.85;
+}
+
+.courses-header {
+  padding-top: 0;
+}
+
+.courses-block {
+  margin-bottom: 20px;
+}
+
+.courses h4 {
+    text-align: right;
+}
+
+.courses { 
+  margin-top: 8px; 
+  margin-bottom: 8px; 
+}
+
+.courses p > strong { 
+  display: block; 
+}
+
+#coursework-title {
+  background: linear-gradient(90deg, 
+               rgba(255,255,255, 1), 
+               rgba(255,255,255, .98),
+               rgba(255,255,255, .4)),
+               url(../images/coursework-01a.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/coursework-01a.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/coursework-01a.jpg', sizingMethod='scale'); 
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+
+/* ******************* JOB HISTORY ******************* */
+
+#job-history {
+  margin-top: 72px;
+}
+
+#job-history-title {
+  background: linear-gradient(90deg, 
+               rgba(255,255,255, 1), 
+               rgba(255,255,255, .98),
+               rgba(255,255,255, .4)),
+               url(../images/jobs6c.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/jobs6c.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/jobs6c.jpg', sizingMethod='scale');
+  overflow: hidden;
+  margin-bottom: 45px;
+}
+
+.job-details { 
+  display: block; 
+  margin-top: 6px; 
+}
+
+.job-details * { color: #22A39F; }
+
+.job-company {
+  font-family: 'Merriweather', serif !important; 
+  font-size: 14pt;
+  font-weight: 700; 
+  margin-bottom: 5px;
+}
+
+.job-period {
+  font-size: 10pt;
+  margin-top: 3px;
+  padding-top: 0;
+}
+
+.job-location {
+  font-size: 10pt;
+  margin-top: 3px;
+}
+
+.job-title {
+  display: block; 
+  padding-top: 5px; 
+  margin-bottom: 0; 
+  font-family: 'Merriweather', serif !important;
+  font-size: 13pt; 
+  font-weight: 700;
+}
+
+.job-description {
+  font-size: 12pt;
+}
+
+/* ******************* PROJECTS ******************* */
+
+#projects { 
+  margin-top: 90px; 
+}
+
+#projects-main .row > div { 
+  margin-bottom: 30px; 
+}
+
+#projects-title {
+  background: linear-gradient(90deg, 
+               rgba(255,255,255, 1), 
+               rgba(255,255,255, .97),
+               rgba(255,255,255, .4)),
+               url(../images/projects8a.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/projects8a', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/projects8a', sizingMethod='scale'); 
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* ******************* CONTACT ******************* */
+
+#contact-top { 
+  font-family: 'Roboto', sans-serif; 
+  font-size: 12pt; }
+#contact h2, #contact .row * { 
+  color: #FFFFFF; 
+}
+
+#contact .row { 
+  padding-top: 30px; 
+}
+
+#contact { 
+  margin-top: 80px;
+  padding-bottom: 20px;
+}
+
+.kxcd {
+  background-color: #fff;
+  margin: 29px 15px 0 15px;
+  border-radius: 20px;
+    max-width: 400px;
+        padding: 15px;
+}
+
+.kxcd img {
+
+    width: 100%;
+} 
+
+.form-block {
+  margin-right: 35px;
+}
+
+.form-thankyou {
+  display: none;
+  padding-top: 30px;
+  font-size: 13pt !important;
+  font-family: 'Roboto', sans-serif; 
+}
+
+#contact-intro {
+  color: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.form-group p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1 !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 13pt;
+  font-weight: 500 !important;
+}
+
+#contact hr {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#copyright p {
+  margin-top: 0;
+  padding-top: 0;
+  color: #999999 !important;
+  font-size: 10pt !important;
+}
+
+/* ******************* ANIMATIONS/EFFECTS ******************* */
+
+@keyframes wiggle {
+  0% {
+    padding-top: 20px;
+  }
+
+  50% {
+    padding-top: 28px;
+  }
+
+  100% {
+    padding-top: 20px;
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.2, 1.2, 1.2) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.2, 1.2, 1.2) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* ******************* BREAKPOINT ADJUSTMENTS ******************* */
+
+@media (min-width: 992px) {
+
+    #about {
+      height: 100vh !important;
+      height: 100% !important;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+        #about2 {
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+
+#about-img-block {
+  padding-bottom: 20px !important;
+}
+
+.courses h4 {
+    text-align: left !important;
+}
+
+}
+
+@media (max-width: 767px) { 
+  .jumbotron:before {
+    bottom: 100px;
+    left: 20px;
+    right: 20px;
+    top: 20px;    
+  }
+  .jumbotron .container { top: 20%; padding-top: 0px; }
+  .jumbotron .scroll-down { width: 100%; right: 0px; }
+  
+  .navbar  { left: 0px; width: 100%;   background-color: rgba(25,25,25, 0.95); }
+  .navbar .nav > li { height: 50px; }
+  .navbar .nav > li a { height: 50px; text-align: center; padding-top: 10px; font-weight: 100; color: #FFFFFF; }
+  
+  .fixed .navbar { top: 0px; }
+  
+  .hidden-phone { display: none; }
+  
+  #about .row * { text-align: left; }
+  
+  
+  #contact { padding-bottom: 60px; }
+  #contact a .icon { float: left; margin-right: 10px; }
+ 
+ h1 {
+  font-size: 110pt !important;
+ }
+
+ h2 {
+    font-size: 48px !important; 
+ }
+
+ .intro-p {
+  font-size: 11pt !important;
+ }
+
+ #about { 
+  font-size: 12pt !important;
+}
+
+#about-img {
+  width: 70% !important;
+}
+
+#about-img-block {
+  text-align: center !important;
+}
+
+.kxcd {
+  margin-right: 50px;
+}
+
+#navbar-brand {
+  display: inline;
+  color: #eeeeee;
+  font-weight: 500;
+}
+
+}    
+
+@media only screen and (orientation: portrait) and (max-width: 767px)  {
+.bg-image {
+    /*  -webkit-background-size: auto 150%; */
+      background-attachment: scroll;
+    } 
+
+    .container { 
+  padding: 0 20px 15px 20px; 
+}
+
+
+
+
+}
+@media only screen and (orientation: landscape) and (max-width: 767px)  {
+
+ /*   .jumbotron {
+      -webkit-background-size: 150% auto;
+      background-attachment: fixed;
+    } */
+  
+  .jumbotron .lead { display: none; }
+
+      .container { 
+  padding: 0 20px 15px 20px; 
+}
+
+
+
+}
