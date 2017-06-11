@@ -642,7 +642,7 @@ li {
 
 #about .row > div img { 
   width: 100%; 
-  max-width: 400px;
+  max-width: 300px;
 }
 
 #about .row {
@@ -668,11 +668,15 @@ li {
 #about-block {
   max-width: 1000px;
   margin: auto;
+  padding: 0;
+  margin: 0;
 }
 
 #about-intro {
   color: #ffffff; 
   font-weight: 400;
+  padding: 0 5px 0 5px;
+  margin: 0;
 }
 
 #about-intro a {
@@ -688,7 +692,7 @@ li {
 }
 
 #about-img-block {
-  padding: 6px 15px 5px 5px;
+  padding: 5px 15px 5px 5px;
   margin: 0;
 }
 
@@ -962,7 +966,7 @@ background-image: linear-gradient(30deg,#f9d423,#ff4e50);
 
 @media (max-width: 991px) {
   #about2 {
-    padding-top: 75px;
+    padding-top: 54px;
     padding-bottom: 30px;
   } 
 
