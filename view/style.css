@@ -656,7 +656,6 @@ li {
 #about { 
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif; 
   font-size: 13pt;
-
   margin: 0;
   padding: 0;
 }
@@ -674,7 +673,7 @@ li {
 
 #about-intro {
   color: #ffffff; 
-  font-weight: 400;
+  font-weight: 300;
   padding: 0 5px 0 5px;
   margin: 0;
 }
