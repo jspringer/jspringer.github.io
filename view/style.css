@@ -1069,10 +1069,26 @@ li {
     opacity: 100;
   }
 
+  #fadeOutOnScrollDown {
+    position: absolute;
+  }
+
+  .scroll-down{
+    position: absolute;
+  }
+
 
 }
 @media only screen and (orientation: landscape) and (max-width: 767px)  { 
   .container { 
     padding: 0 15px 15px 15px; 
+  }
+
+  #fadeOutOnScrollDown {
+    position: absolute;
+  }
+
+  .scroll-down{
+    position: absolute;
   }
 }
