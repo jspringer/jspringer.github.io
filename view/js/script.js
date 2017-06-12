@@ -311,7 +311,7 @@ function titleToggle() {
 
 function downArrowToggle() {
   $(window).scroll(function () {
-      if($(this).scrollTop() > ($(window).height() - ($(window).height()/1.1)))
+      if($(this).scrollTop() > ($(window).height() - ($(window).height()/1.06)))
       {
           if (!$('#down-arrow').hasClass('hide'))
           {
