@@ -311,9 +311,14 @@ li {
   border-bottom: medium solid #65bdff;
 }
 
-.navbar-default .navbar-toggle:hover .icon-bar,
-.navbar-default .navbar-toggle:focus .icon-bar { 
-  background: #222222; 
+.navbar-default .navbar-toggle {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { 
+  background: #eeeeee !important; 
 }
 
 .bottom-nav-icons {
