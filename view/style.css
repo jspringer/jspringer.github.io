@@ -57,7 +57,7 @@ h2 {
   margin: 0 0 25px 0; 
   line-height: 1; 
   padding-top: 40px; 
-  padding-right: 4px;
+  padding-right: 5px;
   text-transform: uppercase;
 }
 
@@ -593,7 +593,7 @@ li {
 #skills-hr {
 
   background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
-  padding-right: 2px;
+  padding-right: 3px;
 
 }
 
@@ -636,7 +636,7 @@ li {
 
   background-image: linear-gradient(30deg,#f9d423,#ff4e50);
   /* #ffbf02,#fa7d78 */
-  padding-right: 2px;
+  padding-right: 3px;
 
 }
 
@@ -687,7 +687,7 @@ li {
 
 #job-history-hr {
   background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
-  padding-right: 2px;
+  padding-right: 3px;
 }
 
 /* ******************* PROJECTS ******************* */
@@ -702,7 +702,7 @@ li {
 
 #projects-hr {
   background-image: linear-gradient(30deg,#f9d423,#ff4e50);
-  padding-right: 2px;
+  padding-right: 3px;
 
 }
 
@@ -715,7 +715,7 @@ li {
 
 #contact-hr {
   background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
-  padding-right: 2px;
+  padding-right: 3px;
 }
 
 #contact h2, #contact .row * { 
