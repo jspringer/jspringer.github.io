@@ -325,8 +325,8 @@ li {
   display: inline-block !important;
 }
 
-#bottom-nav-icons-block a:hover {
-  color: #000000;
+#bottom-nav-icons-block a {
+  color: #444444;
 }
 
 
@@ -335,14 +335,20 @@ li {
   top: 0; 
 }
 
+#nav-icon-github:hover {
+  color: #6e5494;
+  animation: magnify 0.1s linear normal forwards;
+  -webkit-animation: magnify 0.1s ease normal forwards;
+}
+
 #nav-icon-linkedin:hover {
   color: #0077b5;
   animation: magnify 0.1s linear normal forwards;
   -webkit-animation: magnify 0.1s ease normal forwards;
 }
 
-#nav-icon-github:hover {
-  color: #c9510c;
+#nav-icon-angellist:hover {
+  color: #000000;
   animation: magnify 0.1s linear normal forwards;
   -webkit-animation: magnify 0.1s ease normal forwards;
 }
