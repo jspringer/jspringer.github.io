@@ -3,6 +3,7 @@ var lnStickyNavigation;
 $(document).ready(function()
 { 
   // safariFontIssueFix();
+  // activateStellarParallax();
   fadeInBlock();
   applyNavigation();
   fadeOutOnScrollDown(); 
@@ -324,3 +325,8 @@ function downArrowToggle() {
       }
   });
 }
+
+/* STELLAR PARALLAX  
+function activateStellarParallax() {
+  $.stellar();
+} */
