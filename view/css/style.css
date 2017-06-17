@@ -678,14 +678,14 @@ li {
   margin-top: 3px;
 }
 
-.job-title {
+/* .job-title {
   display: block; 
   padding-top: 5px; 
   margin-bottom: 0; 
   font-family: 'Merriweather', serif;
   font-size: 13pt; 
   font-weight: 700;
-}
+} */
 
 .job-description {
   font-size: 12pt;
@@ -914,6 +914,10 @@ li {
 
   .courses h4 {
     text-align: left;
+  }
+
+  .job-title {
+    padding-left: 40px;
   }
 }
 
