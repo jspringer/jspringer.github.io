@@ -532,7 +532,7 @@ li {
 }
 
 #about .row {
-  background-image: linear-gradient(300deg,#87b8f0,#93c5f8 60%,#aadafe,#c5ebfe);
+  background-image: linear-gradient(300deg,#81b2ed,#87b8f0,#93c5f8 70%,#aadafe,#c5ebfe);
   padding: 30px;
   box-shadow: 1.5px 1.5px 4px #c8c8c8;
 }
@@ -565,7 +565,7 @@ li {
 }
 
 #about-intro a {
-  color: #dedede; 
+  color: #eaeaea; 
   font-weight: 400;
 }
 
