@@ -216,6 +216,14 @@ li {
   font-weight: 300;
 }
 
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.inline {
+  display: inline-block;
+}
+
 .hide {
   display: none !important;
 }
