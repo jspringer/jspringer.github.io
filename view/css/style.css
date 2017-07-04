@@ -137,6 +137,16 @@ li {
 
 /* ******************* GENERAL LAYOUT ******************* */
 
+::selection {
+  color: #ffffff;
+  background-color: #65bdff;
+}
+
+::-moz-selection { 
+  color: #ffffff;
+  background-color: #65bdff;
+}
+
 .container { 
   padding: 0 100px 15px 100px; 
   margin: auto;
