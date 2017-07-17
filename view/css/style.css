@@ -600,6 +600,63 @@ li {
   margin: 0;
 }
 
+
+/* ******************* PROJECTS ******************* */
+
+#projects { 
+  padding-bottom: 50px;
+}
+
+#projects-hr {
+  background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
+  padding-right: 3px;
+}
+
+.projects .row {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+}
+
+.project {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-screenshot img {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #aaaaaa;
+}
+
+.project-description {
+  font-size: 11pt;
+  margin-top: 3px;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-details {
+  font-size: 10pt;
+  font-style: italic;
+  margin-top: 7px;
+  padding-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.project-title {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
 /* ******************* SKILLS ******************* */
 
 #skills {
@@ -616,7 +673,7 @@ li {
 
 #skills-hr {
 
-  background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
+  background-image: linear-gradient(30deg,#f9d423,#ff4e50);
   padding-right: 3px;
 
 }
@@ -658,7 +715,7 @@ li {
 
 #coursework-hr {
 
-  background-image: linear-gradient(30deg,#f9d423,#ff4e50);
+  background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
   /* #ffbf02,#fa7d78 */
   padding-right: 3px;
 
@@ -710,25 +767,10 @@ li {
 }
 
 #job-history-hr {
-  background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
-  padding-right: 3px;
-}
-
-/* ******************* PROJECTS ******************* */
-
-#projects { 
-  padding-bottom: 70px;
-}
-
-#projects-main .row > div { 
-  margin-bottom: 30px; 
-}
-
-#projects-hr {
   background-image: linear-gradient(30deg,#f9d423,#ff4e50);
   padding-right: 3px;
-
 }
+
 
 /* ******************* CONTACT ******************* */
 
@@ -936,6 +978,17 @@ li {
 
   .job-title {
     padding-left: 40px;
+  }
+
+  .project-description {
+    max-width: 500px;
+  }
+
+  .project-row-second-item {
+    margin-top: 0;
+    padding-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 

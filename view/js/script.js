@@ -296,7 +296,7 @@ function navBarSlideDownOnScrollDown() {
 
 function titleToggle() {
   $(window).scroll(function () {
-      if($(this).scrollTop() > ($(window).height() + ($(window).height() * 1.5)))
+      if($(this).scrollTop() > ($(window).height() + ($(window).height() * 0.8)))
       {
           if (!$('#fadeOutOnScrollDown').hasClass('hide'))
           {
