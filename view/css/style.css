@@ -538,6 +538,12 @@ li {
   margin-right: 12px;
 }
 
+.title-icon:hover {
+  color: #ffffff;
+  animation: magnify-lite 0.1s linear normal forwards;
+  -webkit-animation: magnify-lite 0.1s ease normal forwards;
+}
+
 /* ******************* ABOUT ******************* */
 
 #about .row > div { 
@@ -915,6 +921,32 @@ li {
     transform: scale3d(1.5, 1.5, 1.5);
   }
 }
+
+
+
+
+@keyframes magnify-lite {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+}
+
+
+@-webkit-keyframes magnify-lite {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+}
+
+
 
 @-webkit-keyframes tada {
   from {
