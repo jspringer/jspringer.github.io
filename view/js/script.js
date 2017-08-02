@@ -13,7 +13,6 @@ $(document).ready(function()
   downArrowToggle();
   navBarSlideDownOnScrollDown();
   iconAnimationOnScrollDown();
-  visibleOnLoad();
   applyMailTo();
   applyResize();
   checkHash();
@@ -207,15 +206,6 @@ $(window).scroll(function () {
     });
 })(jQuery);
 
-
-/* VISIBLE ON LOAD */
-
-function visibleOnLoad() {
-  $(document).ready(function(){
-        $('#title').removeClass('invisible2');
-        $('#icons-top').removeClass('invisible2');
-    });
-}
 
 /* FADE IN DIV BLOCK FUNCTION */
 
