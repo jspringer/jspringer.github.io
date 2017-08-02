@@ -430,11 +430,7 @@ li {
 
 /* ******************* TOP ******************* */
 
-.invisible2 {
-   visibility: none;
-}
-
-#top::before {
+#top:before {
   content: "";
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
@@ -454,7 +450,6 @@ li {
 #top a:hover {
   border-bottom: none;
 }
-
 
 #title {
   color: #ffffff;
