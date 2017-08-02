@@ -147,6 +147,13 @@ li {
   background-color: #65bdff;
 }
 
+.bg-image {
+  background: no-repeat center right fixed url(../../images/nyc-02.jpg); 
+  background-size: cover;
+  background-color: #ffffff;  
+  z-index: -10;
+}
+
 .container { 
   padding: 0 100px 15px 100px; 
   margin: auto;
@@ -180,13 +187,6 @@ li {
 
 .background-black {
   background-color: #000000;
-}
-
-.bg-image {
-  background: no-repeat center right fixed url(../../images/nyc-02.jpg); 
-  background-size: cover;
-  background-color: #ffffff;  
-  z-index: -3;
 }
 
 #bgfadein {
@@ -438,7 +438,8 @@ li {
   bottom: 0;
   left: 0;
   right: 0;
-}
+  z-index: -2;
+} 
 
 #top {
   margin: 0;
@@ -464,7 +465,7 @@ li {
   left: 0; 
   right: 0; 
   background-color: transparent; 
-  z-index: 1; 
+  z-index: -1; 
   text-align: center; 
 }
 
@@ -483,7 +484,7 @@ li {
 
  #fadeOutOnScrollDown {
   position: fixed;
-
+  z-index: -1;
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -493,10 +494,6 @@ li {
 #title-padding {
   padding-top: 80px;
 }
-
-#title-container {
-  z-index: -1;
-} 
 
 #icons-top {
   padding-top: 16px;
