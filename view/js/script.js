@@ -4,6 +4,7 @@ $(document).ready(function()
 { 
   // safariFontIssueFix();
   // activateStellarParallax();
+  topLoadPage();
   fadeInBlock();
   applyNavigation();
   fadeOutOnScrollDown(); 
@@ -18,6 +19,21 @@ $(document).ready(function()
   checkHash();
   checkBrowser();
 });
+
+/* FORCE PAGE TO LOAD AT TOP */
+
+function topLoadPage() {
+  $(document).ready(function(){
+    $('html, body').scrollTop(0);
+
+    $(window).on('load', function() {
+      setTimeout(function(){
+          $('html, body').scrollTop(0);
+      }, 0);
+    });
+  });
+}
+
 
 /* HEADER FUNCTIONS */
 
