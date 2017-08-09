@@ -314,14 +314,14 @@ function iconAnimationOnScrollDown() {
 
 function navBarSlideDownOnScrollDown() {
   $(window).scroll(function () {
-      if($(this).scrollTop() > ($(window).height() - 51))
+      if($(this).scrollTop() > ($(window).height() - 350))
       {
           if (!$('.navbar').hasClass('navbar-show'))
           {
               $('.navbar').stop().addClass('navbar-show').css('top', '-50px').animate(
                   {
                       'top': '0px'
-                  }, 400);
+                  }, 300);
           }
       }
       else
