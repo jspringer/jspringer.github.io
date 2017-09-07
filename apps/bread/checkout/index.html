@@ -175,19 +175,21 @@ message (if approved to proceed).
               callback(null, data.tax);
             }
           }); */
-        calculateTax: function(shippingContact) {
+        calculateTax: function(shippingContact, callback) {
           var itemsTotal = 0;
           var nyTaxRate = 0.05;
           var otherTaxRate = 0;
+          var finalTax = 0;
           // if we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
           for (var i = 0; i < items.length; i++) {
             itemsTotal += items[i].price * items[i].quantity;
           }
           if (shippingContact.state === 'NY') {
-              return (itemsTotal * nyTaxRate);
+              finalTax = itemsTotal * nyTaxRate;
             } else {
-              return otherTaxRate;
+              finalTax = otherTaxRate;
             }
+          callback(null, finalTax);
         },
         onCustomerClose: function(err, custData) {
           if (err !== null) {
