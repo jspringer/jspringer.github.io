@@ -151,7 +151,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             cost: 1800
           }
         ],
-        calculateTax: function(shippingContact) {
+        calculateTax: function(shippingContact, callback) {
             var itemsTotal = 0;
             var nyTaxRate = 0.05;
             var taxRate = 0;
