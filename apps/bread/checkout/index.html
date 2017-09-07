@@ -41,9 +41,9 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
       var items = [{
           name: "iPhone 8",
           price: 10000,
-          sku:"IPH0801",
-          imageUrl:"http://jasonspringer.me/apps/bread/checkout/iphone8.jpg",
-          detailUrl:"https://www.macrumors.com/roundup/iphone-8/",
+          sku:" IPH0801",
+          imageUrl: "http://jasonspringer.me/apps/bread/checkout/iphone8.jpg",
+          detailUrl: "https://www.macrumors.com/roundup/iphone-8/",
           quantity: 1
         }];
 
@@ -103,7 +103,6 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
           }
         ],
         calculateTax: function(shippingContact, callback) {
-          function(shippingContact) {
             var itemsTotal = 0;
             var nyTaxRate = 0.05;
             var taxRate = 0;
@@ -129,8 +128,6 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
               callback(null, data.tax);
             }
           }); */
-
-          }
         }, 
         onCustomerClose: function(err, custData) {
           if (err !== null) {
