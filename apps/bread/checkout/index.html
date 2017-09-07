@@ -151,7 +151,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             cost: 1800
           }
         ],
-        calculateTax: (function(shippingContact, callback) {
+        calculateTax: function(shippingContact) {
             var itemsTotal = 0;
             var nyTaxRate = 0.05;
             var taxRate = 0;
@@ -164,7 +164,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
               } else {
                 return taxRate;
             }
-          })(shippingContact),
+          },
           // If I was running a server, the following would be used instead of the if statement above - Jason
           /* 
           $.ajax({
