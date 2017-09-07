@@ -25,20 +25,24 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
 
 <html>
   <head>
-   <title>Toasty Electronics: Checkout</title>
-   <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
+    <title>Toasty Electronics: Checkout</title>
+    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
 
-   <style type="text/css">
-     body { 
-       background: #ffffff; 
-       font-size: 14pt; 
-       line-height: 1.25; 
-       color: #434242; 
-       font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; 
-       font-weight: 300; 
-     }
+    <style type="text/css">
+      body { 
+        background: #ffffff; 
+        font-size: 14pt; 
+        line-height: 1.25; 
+        color: #434242; 
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; 
+        font-weight: 300; 
+      }
 
-   </style>
+      #bread-checkout-btn, #checkout-form {
+        color: red;
+      }
+
+    </style>
   </head>
   <body>
     <h1>Toasty Electronics</h1>
@@ -178,7 +182,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             break;
           }
         }, 
-        customCSS: "#bread-button{color:red;}"
+        /* customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:url('http://jasonspringer.me/apps/bread/checkout/breadicon.png');color:red;display:table-cell;font-family:'Times New Roman',Times,serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}" */
       }; // end of opts
 
       bread.checkout(opts);
