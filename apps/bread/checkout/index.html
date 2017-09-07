@@ -1,29 +1,39 @@
 <!-- 
 
 CHECKLIST: 
-✓ One product costing $100 is to be purchased
+✓ 1. One product costing $100 is to be purchased
 
-✓ There is both a 2-day and an overnight shipping option available for this product
+✓ 2. There is both a 2-day and an overnight shipping option available for this product
 
-✓ The tax charged to a purchaser should be 5% if the shipping address supplied by
+✓ 3. The tax charged to a purchaser should be 5% if the shipping address supplied by
 the customer within the Bread checkout flow is in the state of NY, otherwise tax
 should be 0
+  Note: Since I am not running a server, I calculated the text on the client side. I tried using that calculate 
+        function within calculateTax and was unable to get it to display the tax 
 
-✓ Since this test merchant is pre-configured in Bread’s system with loan offerings,
+✓ 4. Since this test merchant is pre-configured in Bread’s system with loan offerings,
 we are able to display an “as low as $” number on the Bread button - show this.
 
-✓ The button should always be a clickable button, whether or not a user is logged
+✓ 5. The button should always be a clickable button, whether or not a user is logged
 in
 
-x When a user has completed a full checkout, they should receive a success
+x 6. When a user has completed a full checkout, they should receive a success
 message (if approved to proceed). 
- ^ I think it wouldn't let me complete since it's a test account? - Jason 
+ ^ "We aren't able to process your request at this time."
+   I think it wouldn't let me complete since it's a test account?
+   I tried adding a done property to opts, minus the ajax, but same popup kept appearing. - Jason 
 
-If a user closes the form without completing the checkout:
-✓ If declined, they should receive an appropriate message
-✓ If approved, the customer should receive an appropriate message 
+✓ 7. If a user closes the form without completing the checkout:
+ ✓ a. If declined, they should receive an appropriate message
+ ✓ b. If approved, the customer should receive an appropriate message 
 
-✓ The color of the text font within the Bread button should be red
+✓ 8. The color of the text font within the Bread button should be red
+  Note: I tried to overwrite the bread button css using the main doc css first, first without !important, then with. 
+        Neither worked, so I used customCSS in the opts object. Using customCSS undoes everything, including 
+        the default button image, even if only one CSS property is listed. Since the instructions said to 
+        use that button and make the text red, I had to edit the button image to have no additional white 
+        space around it, make the center all white, and in the customCSS, set padding-right to 50px so the 
+        text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency. - Jason
 
 --> 
 
@@ -41,18 +51,9 @@ If a user closes the form without completing the checkout:
         font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; 
         font-weight: 300; 
       }
-
        
-      /* I tried to overwrite the bread button css this way first, first without !important, then with. 
-         Neither worked, so I used customCSS in the opts object. Using customCSS undoes everything, including 
-         the default button image, even if only one CSS property is listed. Since the instructions said to 
-         use that button and make the text red, I had to edit the button image to have no additional white 
-         space around it, make the center all white, and in the customCSS, set padding-right to 50px so the 
-         text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency. - Jason
-
-         #bread-checkout-btn, #checkout-form, #bread-checkout-btn-bread-iframe {
-           color: red !important;
-         } */
+      /* #bread-checkout-btn, #checkout-form, #bread-checkout-btn-bread-iframe { color: red !important; } 
+         Didn't overwrite Bread button css, since #8 in notes above. */
 
     </style>
   </head>
@@ -72,8 +73,10 @@ If a user closes the form without completing the checkout:
       <div id="bread-checkout-btn" data-bread-default-size=true></div>
       
     </form>
-
-    <div id="successPanel" style="display: none;"><p>Order was a success! Your confirmation number is: <span id="orderConfirmationNumber"></span></div>
+    
+    <!-- If done is used in opts: 
+      <div id="successPanel" style="display: none;"><p>Order was a success! Your confirmation number is: <span id="orderConfirmationNumber"></span></div>
+    --> 
 
     <script type='text/javascript'>
       var items = [{
@@ -157,7 +160,7 @@ If a user closes the form without completing the checkout:
             cost: 1800
           }
         ],
-        tax: finalTaxRate,
+        calculateTax: taxCalc(shippingContact),
           /* If I was running a server, the following would be used with calculateTax instead of directly assigning 
              the value to tax calculated through the taxCalc function above. I tried using what is done in the taxCalc 
              function above under calculateTax, but had trouble getting it to return the added tax on the button. - Jason
@@ -202,6 +205,8 @@ If a user closes the form without completing the checkout:
             break;
           }
         }, 
+        /* Not sure if this done is necessary since I could not complete the transaction. Adding it did not change 
+           the outcome. See #6 in notes at top. 
         done: function(err, txToken) {
             if (err !== null) {
               alert("There was an error!" + err);
@@ -210,7 +215,7 @@ If a user closes the form without completing the checkout:
               $("#successPanel").show();
               $("#orderConfirmationNumber").text(txToken.orderConfirmationId);
             }
-        },
+        }, */
         customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background-image:url('http://jasonspringer.me/apps/bread/checkout/breadicon-edit.jpg');background-size:100% 100%;background-repeat:no-repeat;color:red;display:table-cell;font-family:Helvetica,Arial,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block;padding-right:50px}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}" 
         }; // end of opts
 
