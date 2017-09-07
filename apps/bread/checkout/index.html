@@ -1,18 +1,20 @@
 <!-- Submit to us a deliverable of your choice that configures a Bread button with the following characteristics:
-• One product costing $100 is to be purchased
-• There is both a 2-day and an overnight shipping option available for this product
-• The tax charged to a purchaser should be 5% if the shipping address supplied by
+✓ One product costing $100 is to be purchased
+✓ There is both a 2-day and an overnight shipping option available for this product
+✓ The tax charged to a purchaser should be 5% if the shipping address supplied by
 the customer within the Bread checkout flow is in the state of NY, otherwise tax
 should be 0
-• Since this test merchant is pre-configured in Bread’s system with loan offerings,
+✓ Since this test merchant is pre-configured in Bread’s system with loan offerings,
 we are able to display an “as low as $” number on the Bread button - show this.
-• The button should always be a clickable button, whether or not a user is logged
+✓ The button should always be a clickable button, whether or not a user is logged
 in
-• When a user has completed a full checkout, they should receive a success
+- When a user has completed a full checkout, they should receive a success
 message (if approved to proceed).
-• If a user closes the form without completing the checkout:
-o If declined, they should receive an appropriate message
-o If approved, the customer should receive an appropriate message • The color of the text font within the Bread button should be red
+✓ If a user closes the form without completing the checkout:
+✓ If declined, they should receive an appropriate message
+✓ If approved, the customer should receive an appropriate message 
+✓ The color of the text font within the Bread button should be red
+
 Sandbox API notes:
 • Use a random and unique phone number (mash the keys, essentially)
 • When inputting last 4 digits of a fake SSN: input the last 4 digits as 0800.
@@ -120,7 +122,6 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             url: '/tax',
             type: 'POST',
             data: {shipping: shippingContact, total: itemsTotal} 
-            // if I was running my own server, the tax would be calcuated there and returned - Jason
           }).done(function(data){
             if (data.error !== undefined) {
               callback(new Error("Tax Error"));
@@ -159,7 +160,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             break;
           }
         }, 
-        customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#333;color:red;display:table-cell;font-family:'Times New Roman',Times,serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}"
+        customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#ddd;color:red;display:table-cell;font-family:'Times New Roman',Times,serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}"
       }; // end of opts
 
       bread.checkout(opts);
