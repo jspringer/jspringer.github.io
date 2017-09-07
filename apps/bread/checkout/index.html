@@ -151,7 +151,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             cost: 1800
           }
         ],
-        calculateTax: function(shippingContact, callback) {
+        calculateTax: (function(shippingContact, callback) {
             var itemsTotal = 0;
             var nyTaxRate = 0.05;
             var taxRate = 0;
@@ -160,12 +160,11 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
               itemsTotal += items[i].price * items[i].quantity;
             }
             if (shippingContact.state === 'NY') {
-                data.tax = itemsTotal * nyTaxRate;
+                return itemsTotal * nyTaxRate;
               } else {
-                data.tax = taxRate;
+                return taxRate;
             }
-            return data.tax;
-          },
+          })(shippingContact),
           // If I was running a server, the following would be used instead of the if statement above - Jason
           /* 
           $.ajax({
