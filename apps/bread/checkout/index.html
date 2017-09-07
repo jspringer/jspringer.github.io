@@ -21,6 +21,7 @@ message (if approved to proceed).
   Note: "We aren't able to process your request at this time."
         I think it wouldn't let me complete since it's a test account?
         I tried adding a done property to opts, minus the ajax, but same popup kept appearing. 
+        See: http://jasonspringer.me/apps/bread/checkout/pleasecontactus.png
 
 ✓ 7. If a user closes the form without completing the checkout:
  ✓ a. If declined, they should receive an appropriate message
@@ -204,7 +205,7 @@ message (if approved to proceed).
           }
         }, 
         /* Not sure if this done is necessary since I could not complete the transaction. Adding it did not change 
-           the outcome. See #6 in notes at top. 
+           the outcome. See #6 in notes at top. Changed the code to handle it client side since I'm not running a server. 
         done: function(err, txToken) {
             if (err !== null) {
               alert("There was an error!" + err);
