@@ -39,9 +39,16 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
       }
 
        
-      /* #bread-checkout-btn, #checkout-form, #bread-checkout-btn-bread-iframe {
-        color: red !important;
-      } */
+      /* I tried to overwrite the bread button css this way first, first without !important, then with. 
+         Neither worked, so I used customCSS in the opts object. Using customCSS undoes everything, including 
+         the default button image, even if only one CSS property is listed. Since the instructions said to 
+         use that button and make the text red, I had to edit the button image to have no additional white 
+         space around it, make the center all white, and in the customCSS, set padding-right to 50px so the 
+         text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency. - Jason
+
+         #bread-checkout-btn, #checkout-form, #bread-checkout-btn-bread-iframe {
+           color: red !important;
+         } */
 
     </style>
   </head>
