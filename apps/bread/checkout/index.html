@@ -8,8 +8,7 @@ CHECKLIST:
 ✓ 3. The tax charged to a purchaser should be 5% if the shipping address supplied by
 the customer within the Bread checkout flow is in the state of NY, otherwise tax
 should be 0
-  Note: Since I am not running a server, I calculated the text on the client side. I tried using that calculate 
-        function within calculateTax and was unable to get it to display the tax 
+  Note: Since I am not running a server, I calculated the text on the client side. - Jason
 
 ✓ 4. Since this test merchant is pre-configured in Bread’s system with loan offerings,
 we are able to display an “as low as $” number on the Bread button - show this.
@@ -19,9 +18,9 @@ in
 
 x 6. When a user has completed a full checkout, they should receive a success
 message (if approved to proceed). 
- ^ "We aren't able to process your request at this time."
-   I think it wouldn't let me complete since it's a test account?
-   I tried adding a done property to opts, minus the ajax, but same popup kept appearing. - Jason 
+  Note: "We aren't able to process your request at this time."
+        I think it wouldn't let me complete since it's a test account?
+        I tried adding a done property to opts, minus the ajax, but same popup kept appearing. - Jason 
 
 ✓ 7. If a user closes the form without completing the checkout:
  ✓ a. If declined, they should receive an appropriate message
@@ -31,9 +30,11 @@ message (if approved to proceed).
   Note: I tried to overwrite the bread button css using the main doc css first, first without !important, then with. 
         Neither worked, so I used customCSS in the opts object. Using customCSS undoes everything, including 
         the default button image, even if only one CSS property is listed. Since the instructions said to 
-        use that button and make the text red, I had to edit the button image to have no additional white 
-        space around it, make the center all white, and in the customCSS, set padding-right to 50px so the 
-        text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency. - Jason
+        use that button and make the text red, I had to edit the button image and in the customCSS, set padding-right 
+        to 50px so the text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency. - Jason
+
+✓ Extra Credit - See notes at bottom of this file for details. 
+  Link: https://checkout-sandbox.getbread.com/Flvr4F
 
 --> 
 
@@ -108,7 +109,7 @@ message (if approved to proceed).
         city:     'Brooklyn',
         state:    'NY',
         zip:      '11211',
-        phone:    '1234567890',
+        phone:    '5555555555',
         email:    'jasonspringer@aol.com'
       };
 
@@ -120,26 +121,9 @@ message (if approved to proceed).
         city:     'Brooklyn',
         state:    'NY',
         zip:      '11211',
-        phone:    '1234567890',
+        phone:    '5555555555',
         email:    'jasonspringer@aol.com'
       };
-
-      function taxCalc(shippingContact) {
-        var itemsTotal = 0;
-        var nyTaxRate = 0.05;
-        var otherTaxRate = 0;
-        // if we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
-        for (var i = 0; i < items.length; i++) {
-          itemsTotal += items[i].price * items[i].quantity;
-        }
-        if (shippingContact.state === 'NY') {
-            return (itemsTotal * nyTaxRate);
-          } else {
-            return otherTaxRate;
-          }
-      };
-      
-      var finalTaxRate = taxCalc(shippingContact);
 
       var opts = {
         buttonId: 'bread-checkout-btn',
@@ -160,21 +144,6 @@ message (if approved to proceed).
             cost: 1800
           }
         ],
-        // tax: finalTaxRate,
-          /* If I was running a server, the following would be used with calculateTax instead of directly assigning 
-             the value to tax calculated through the taxCalc function above. I tried using what is done in the taxCalc 
-             function above under calculateTax, but had trouble getting it to return the added tax on the button. - Jason
-          $.ajax({
-            url: '/tax',
-            type: 'POST',
-            data: {shipping: shippingContact, total: itemsTotal} 
-          }).done(function(data){
-            if (data.error !== undefined) {
-              callback(new Error("Tax Error"));
-            } else {
-              callback(null, data.tax);
-            }
-          }); */
         calculateTax: function(shippingContact, callback) {
           var itemsTotal = 0;
           var nyTaxRate = 0.05;
@@ -187,9 +156,22 @@ message (if approved to proceed).
           if (shippingContact.state === 'NY') {
               finalTax = itemsTotal * nyTaxRate;
             } else {
-              finalTax = otherTaxRate;
+              finalTax = itemsTotal * otherTaxRate;
             }
           callback(null, finalTax);
+          /* If I was running a server, the following would be used with calculateTax instead and the calculations 
+             would be managed on the server side. - Jason
+          $.ajax({
+            url: '/tax',
+            type: 'POST',
+            data: {shipping: shippingContact, total: itemsTotal} 
+          }).done(function(data){
+            if (data.error !== undefined) {
+              callback(new Error("Tax Error"));
+            } else {
+              callback(null, data.tax);
+            }
+          }); */
         },
         onCustomerClose: function(err, custData) {
           if (err !== null) {
@@ -236,7 +218,152 @@ message (if approved to proceed).
         }; // end of opts
 
       bread.checkout(opts);
+      bread.cartCreate(opts, function(err, data) {
+  if (err !== null) {
+    console.error("There was an error: ", err);
+    return
+  }
+
+  // Set the Link URL for a customer to hit
+  var redirectUrl = data.redirectUrl;
+  $("#someLink").attr("href", redirectUrl);
+
+  // Send the data to your backend system.
+  $.POST("/my/backend/system", {redirectUrl: redirectUrl});
+});
     </script>
     </div>
   </body>
 </html>
+
+<!-- Additional Extra Credit Details
+
+Used Postman to make an API call to https://api-sandbox.getbread.com/carts (POST), used the API key and secret given in the instructions. Body of call below. - Jason
+
+{
+    "expiration": "2017-09-15",
+    "options": {
+        "shippingOptions": [{
+            "type": "2 Day Delivery",
+            "typeId": "UPS_2DAY",
+            "cost": 1200
+          }, 
+          {
+            "type": "Overnight Delivery",
+            "typeId": "UPS_1DAY",
+            "cost": 1800
+          }],
+        "shippingContact": {
+          "firstName": "Jason",
+          "lastName": "Springer",
+          "address": "1 Metropolitan Avenue",
+          "address2": "Apt 3",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zip": "11211",
+          "phone": "5555555555",
+          "email": "jasonspringer@aol.com"
+        },
+        "billingContact": {
+          "fullName": "Jason Springer",
+          "address": "1 Metropolitan Avenue",
+          "address2": "Apt 3",
+          "city": "Brooklyn",
+          "state": "NY",
+          "zip": "11211",
+          "phone": "5555555555",
+          "email": "jasonspringer@aol.com"
+        },
+        "items": [{
+            "imageUrl": "http://jasonspringer.me/apps/bread/checkout/iphone9.jpg",
+            "detailUrl": "https://www.apple.com/iphone/",
+            "name": "iPhone 9 (Retro, 256MB)",
+            "price": 200000,
+            "quantity": 1,
+            "sku": "IPH09RT256"
+        }],
+        "discounts": [{
+            "amount": 100,
+            "description": "$1 Off"
+        }]
+    }
+}
+
+RESPONSE: 
+
+{
+    "id": "f1b29c6e-a543-4efd-8fa9-4523275f6ef5",
+    "cartName": "",
+    "createdBy": "Merchant API",
+    "expiration": "2017-09-15",
+    "url": "https://checkout-sandbox.getbread.com/Flvr4F",
+    "isCustomTotal": false,
+    "options": {
+        "apiKey": "7101ea30-8ae3-47ab-a8bd-235860d36f3e",
+        "orderRef": "",
+        "callbackUrl": "",
+        "completeUrl": "",
+        "errorUrl": "",
+        "shippingOptions": [
+            {
+                "cost": 1200,
+                "type": "2 Day Delivery",
+                "typeId": "UPS_2DAY"
+            },
+            {
+                "cost": 1800,
+                "type": "Overnight Delivery",
+                "typeId": "UPS_1DAY"
+            }
+        ],
+        "items": [
+            {
+                "imageUrl": "http://jasonspringer.me/apps/bread/checkout/iphone9.jpg",
+                "detailUrl": "https://www.apple.com/iphone/",
+                "name": "iPhone 9 (Retro, 256MB)",
+                "price": 200000,
+                "quantity": 1,
+                "sku": "IPH09RT256"
+            }
+        ],
+        "discounts": [
+            {
+                "amount": 100,
+                "description": "$1 Off"
+            }
+        ],
+        "shippingContact": {
+            "firstName": "Jason",
+            "lastName": "Springer",
+            "email": "jasonspringer@aol.com",
+            "address": "1 Metropolitan Avenue",
+            "address2": "Apt 3",
+            "city": "Brooklyn",
+            "state": "NY",
+            "zip": "11211",
+            "phone": "5555555555"
+        },
+        "billingContact": {
+            "fullName": "Jason Springer",
+            "email": "jasonspringer@aol.com",
+            "address": "1 Metropolitan Avenue",
+            "address2": "Apt 3",
+            "city": "Brooklyn",
+            "state": "NY",
+            "zip": "11211",
+            "phone": "5555555555"
+        }
+    },
+    "asLowAs": {
+        "monthly": 5069,
+        "amount": "$50.69",
+        "termLength": 48,
+        "termInterval": "Month",
+        "apr": 0.0999,
+        "minApr": 0.0699,
+        "maxApr": 0.2999,
+        "asLowAsText": "This example payment is the amount of equal monthly payments on a loan to finance the purchase based on the listed product price of $1,999.00 assuming a 48-month term and a 9.99% APR. Your terms may vary and are subject to application. Rates range from 6.99% to 29.99% APR. Bread loans are made by Cross River Bank, member FDIC."
+    }
+}
+
+-->
