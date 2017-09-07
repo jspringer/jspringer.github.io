@@ -1,100 +1,149 @@
+<!-- Submit to us a deliverable of your choice that configures a Bread button with the following characteristics:
+• One product costing $100 is to be purchased
+• There is both a 2-day and an overnight shipping option available for this product
+• The tax charged to a purchaser should be 5% if the shipping address supplied by
+the customer within the Bread checkout flow is in the state of NY, otherwise tax
+should be 0
+• Since this test merchant is pre-configured in Bread’s system with loan offerings,
+we are able to display an “as low as $” number on the Bread button - show this.
+• The button should always be a clickable button, whether or not a user is logged
+in
+• When a user has completed a full checkout, they should receive a success
+message (if approved to proceed).
+• If a user closes the form without completing the checkout:
+o If declined, they should receive an appropriate message
+o If approved, the customer should receive an appropriate message • The color of the text font within the Bread button should be red
+Sandbox API notes:
+• Use a random and unique phone number (mash the keys, essentially)
+• When inputting last 4 digits of a fake SSN: input the last 4 digits as 0800.
+• Instead of a texted one-time password, use code 1234567 when prompted to
+authenticate.
+• After completing the checkout process, the bread button is replaced with a "$ per
+month". Mouse over the tooltip and click "Not you.. click here" to reset the button. -->
+
 <html>
   <head>
    <title>Toasty: Checkout</title>
+   <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
   </head>
   <body>
     <!-- Example existing Checkout HTML -->
     <p>Checkout below:</p>
-
+    
     <!-- Include our button within a form for seamless integration -->
+
     <form id="checkout-form" action="checkout" method="post">
+
       <!-- Note that you must pass a div element -->
       <div id="bread-checkout-btn" data-bread-default-size="true"></div>
+      <div class='bread-promo' data-api-key='7101ea30-8ae3-47ab-a8bd-235860d36f3e' data-promo-size="300x250"></div>
       
     </form>
 
+          <script type='text/javascript'>
+            var items = [{
+                name:"Whirlpool WFW92HEFW",
+                price:74900,
+                sku:"WFW92HEFW",
+                imageUrl:"https://image1.appliancesconnection.com/product/original/b2bb12ded9fc7f9646de3c721bc17780/WFW92HEFW.jpg",
+                detailUrl:"https://www.appliancesconnection.com/whirlpool-wfw92hefw.html",
+                quantity: 1
+              }];
+
+            /* cart.products.forEach(function (p) {
+              items.push(
+                {
+                  name: p.name,                       // required
+                  price: parseInt( (p.price * 100) ), // required (value in cents USD)
+                  sku: p.sku,                         // required
+                  imageUrl: p.imgUrl,                 // optional
+                  detailUrl: p.detailUrl,             // required
+                  quantity: parseInt(p.quantity)      // required
+                }
+              );
+            });*/
+
+            var shippingContact = {
+              fullName: 'Jason Springer',
+              address:  '1 Metropolitan Avenue',
+              address2: 'Apt 3',
+              city:     'Brooklyn',
+              state:    'NY',
+              zip:      '11211',
+              phone:    '1234567890',
+              email:    'jasonspringer@aol.com'
+            };
+
+            var billingContact = {
+              firstName: 'Jason',
+              lastName: 'Springer',
+              address:  '1 Metropolitan Avenue',
+              address2: 'Apt 3',
+              city:     'Brooklyn',
+              state:    'NY',
+              zip:      '11211',
+              phone:    '1234567890',
+              email:    'jasonspringer@aol.com'
+            };
 
 
-    <!-- Create the `opts` object -->
-    <script type='text/javascript'>
-      var items = [];
-      // We will assume you have a `cart` object which has `products`
-      // the shopper has chosen.
-      cart.products.forEach(function (p) {
-        items.push(
-          {
-            name: p.name,                       // required
-            price: parseInt( (p.price * 100) ), // required (value in cents USD)
-            sku: p.sku,                         // required
-            imageUrl: p.imgUrl,                 // optional
-            detailUrl: p.detailUrl,             // required
-            quantity: parseInt(p.quantity)      // required
-          }
-        );
-      });
+            // Below, we will build the required opts object.
+            var opts = {
+              buttonId: 'bread-checkout-btn',
+              items: items,
+              actAsLabel: false,
+              shippingContact: shippingContact,
+              billingContact: billingContact,
+              asLowAs: true,
+              // Optional Array of Shipping Options
+              customCSS: "html,body,#bread-button{height:100%;margin:0;width:100%;}body{display:table;}#bread-button{font-family:arial,helvetica,sans-serif;border:1px solid #067899;display:table-cell;font-size:12px;background-color:#fff;color:#067899;text-align:center;vertical-align:middle;padding:4px;font-weight:bold;}#bread-button:hover{background-color:#067899;color:#fff;}#bread-button:after{background:rgba(255,255,255,.1);content:\'\';height:100%;left:0;opacity:0;position:absolute;top:0;transition:opacity 125ms ease-in-out;width:100%;}#bread-button:hover:after{opacity: 1;}.bread-btn{cursor:pointer}.bread-embed-inner, .bread-label .bread-embed-icon{display:inline-block}.bread-btn .bread-as-low-as:before, .bread-label .bread-as-low-as:before{content:\'Spend as low as \';font-weight:normal;display:block;font-size:12px;}.bread-btn .bread-as-low-as:after, .bread-label .bread-as-low-as:after{content:\' with Bread financing\';font-weight:normal;font-size:12px;}",
+              shippingOptions: [
+                {
+                  type: '2 Day Delivery',
+                  typeId: 'UPS_2DAY',
+                  cost: 1200,
+                }, 
+                {
+                  type: 'Overnight Delivery',
+                  typeId: 'UPS_1DAY',
+                  cost: 1800,
+                }
+              ],
+              calculateTax: function(shippingContact, callback) {
+                function(shippingContact) {
+                  if (shippingContact.state === 'NY') {
+                      return (10000 * 0.05);
+                    } else {
+                      return 0;
+                  }
+                // If I was running a server, this would be used instead of the above
+                /* $.ajax({
+                  url: '/tax',
+                  type: 'POST',
+                  data: {shipping: shippingContact, total: 10000} 
+                  // if I was running my own server, the tax would be calcuated there and returned 
+                }).done(function(data){
+                  if (data.error !== undefined) {
+                    callback(new Error("Tax Error"));
+                  } else {
+                    callback(null, data.tax);
+                  }
+                }); */
 
-      // If you have their shipping address already, you can pass it to us
-      // so they do not have to fill it out again.
-      var shippingContact = {
-        fullName: 'Jane Doe',
-        address:  '123 Test St.',
-        address2: '#8',
-        zip:      '11238',
-        phone:    '5555555555',
-        city:     'Coolstown',
-        state:    'NY',
-      };
+                }
+              } // optional
+            };
 
-      // Likewise, if you have the billing contact, you can pass it in to us
-      // so they do not have to.
-      var billingContact = {
-        email:      'jane.doe@geocities.com',
-        firstName:  'Jane',
-        lastName:   'Doe',
-        address:    '123 Test St.',
-        address2:   'Apt. 4',
-        zip:        '11238',
-        phone:     '5555555555',
-      };
+            // We will assume your `cart` object has the `total`
+            // dollar amount of products in the cart.
+            if (cart.total > 2000) {
+              // Use a non-default Targeted Financing Program for carts over $2000
+              opts.financingProgramId = '0000000-aaaa-bbbb-cccc-ddddddddddd';
+            }
 
-
-      // Below, we will build the required opts object.
-      var opts = {
-        buttonId: 'bread-checkout-btn',
-        items: items,
-        // Optional Array of Shipping Options
-        shippingOptions: [
-          {
-            type: '2 Day Delivery',
-            typeId: 'UPS_2DAY',
-            cost: 1200,
-          }, 
-          {
-            type: 'Overnight Delivery',
-            typeId: 'UPS_1DAY',
-            cost: 1800,
-          }
-        ],
-        calculateTax: function(shippingContact) {
-          if (shippingContact.state === 'NY') {
-
-          }
-        }, // optional
-        shippingContact: shippingContact,
-        billingContact: billingContact,
-        asLowAs: true
-      };
-
-      // We will assume your `cart` object has the `total`
-      // dollar amount of products in the cart.
-      if (cart.total > 2000) {
-        // Use a non-default Targeted Financing Program for carts over $2000
-        opts.financingProgramId = '0000000-aaaa-bbbb-cccc-ddddddddddd';
-      }
-
-      // Lastly, call `checkout` with `opts` as the argument.
-      bread.checkout(opts);
-    </script>
-    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
+            // Lastly, call `checkout` with `opts` as the argument.
+            bread.checkout(opts);
+          </script>
+    </div>
   </body>
 </html>
