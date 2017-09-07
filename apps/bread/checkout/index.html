@@ -104,14 +104,16 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
         calculateTax: function(shippingContact, callback) {
           function(shippingContact) {
             var itemsTotal = 0;
+            var nyTaxRate = 0.05;
+            var taxRate = 0;
             // if we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
             for (var i = 0; i < items.length; i++) {
               itemsTotal += items[i].price * items[i].quantity;
             }
             if (shippingContact.state === 'NY') {
-                return (itemsTotal * 0.05);
+                return (itemsTotal * nyTaxRate);
               } else {
-                return 0;
+                return taxRate;
             }
           // If I was running a server, the following would be used instead of the if statement above - Jason
           /* $.ajax({
@@ -128,8 +130,39 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
           }); */
 
           }
-        } 
-      }; //end of opts
+        }, 
+        onCustomerClose: function(err, custData) {
+          if (err !== null) {
+            console.error("An error occurred getting customer close data.");
+            return;
+          }
+
+          var customerEmail = custData.email;
+          var qualState     = custData.state;
+          switch (qualState) {
+            case 'PREQUALIFIED':
+              console.log(customerEmail + " was prequalified for financing.");
+            break;
+
+            case 'PARTIALLY_PREQUALIFIED':
+              console.log(customerEmail + " was partially prequalified for financing.");
+            break;
+
+            case 'NOT_PREQUALIFIED':
+              console.log(customerEmail + " was not prequalified for financing.");
+            break;
+
+            case 'ABANDONED':
+              if (customerEmail === undefined || customerEmail === null) {
+                console.log("Unknown customer abandoned their prequalification attempt.");
+              } else {
+                console.log(customerEmail + " abandoned their prequalification attempt.");
+              }
+            break;
+          }
+        }, 
+        customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#333;color:red;display:table-cell;font-family:'Times New Roman',Times,serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}"
+      }; // end of opts
 
       bread.checkout(opts);
     </script>
