@@ -114,8 +114,8 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
         phone:    '1234567890',
         email:    'jasonspringer@aol.com'
       };
-      
-      var finalTaxRate = (function(shippingContact) {
+
+      function taxCalc(shippingContact) {
         var itemsTotal = 0;
         var nyTaxRate = 0.05;
         var taxRate = 0;
@@ -128,7 +128,9 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
           } else {
             return taxRate;
           }
-      })(shippingContact);
+      };
+      
+      var finalTaxRate = taxCalc(shippingContact);
 
       var opts = {
         buttonId: 'bread-checkout-btn',
