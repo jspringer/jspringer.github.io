@@ -27,16 +27,11 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
   </head>
   <body>
-    <!-- Example existing Checkout HTML -->
     <p>Checkout below:</p>
-    
-    <!-- Include our button within a form for seamless integration -->
 
     <form id="checkout-form" action="checkout" method="post">
 
-      <!-- Note that you must pass a div element -->
       <div id="bread-checkout-btn" data-bread-default-size="true"></div>
-      
       
     </form>
 
@@ -86,8 +81,6 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
         email:    'jasonspringer@aol.com'
       };
 
-
-      // Below, we will build the required opts object.
       var opts = {
         buttonId: 'bread-checkout-btn',
         items: items,
@@ -96,8 +89,6 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
         billingContact: billingContact,
         asLowAs: true,
         showInWindow: true,
-        // Optional Array of Shipping Options
-        /* customCSS: "html,body,#bread-button{height:100%;margin:0;width:100%;}body{display:table;}#bread-button{font-family:arial,helvetica,sans-serif;border:1px solid #067899;display:table-cell;font-size:12px;background-color:#fff;color:#067899;text-align:center;vertical-align:middle;padding:4px;font-weight:bold;}#bread-button:hover{background-color:#067899;color:#fff;}#bread-button:after{background:rgba(255,255,255,.1);content:\'\';height:100%;left:0;opacity:0;position:absolute;top:0;transition:opacity 125ms ease-in-out;width:100%;}#bread-button:hover:after{opacity: 1;}.bread-btn{cursor:pointer}.bread-embed-inner, .bread-label .bread-embed-icon{display:inline-block}.bread-btn .bread-as-low-as:before, .bread-label .bread-as-low-as:before{content:\'Spend as low as \';font-weight:normal;display:block;font-size:12px;}.bread-btn .bread-as-low-as:after, .bread-label .bread-as-low-as:after{content:\' with Bread financing\';font-weight:normal;font-size:12px;}", */
         shippingOptions: [
           {
             type: '2 Day Delivery',
@@ -137,17 +128,9 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
           }); */
 
           }
-        } // optional
+        } 
       };
 
-      // We will assume your `cart` object has the `total`
-      // dollar amount of products in the cart.
-      if (cart.total > 2000) {
-        // Use a non-default Targeted Financing Program for carts over $2000
-        opts.financingProgramId = '0000000-aaaa-bbbb-cccc-ddddddddddd';
-      };
-
-      // Lastly, call `checkout` with `opts` as the argument.
       bread.checkout(opts);
     </script>
     </div>
