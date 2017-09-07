@@ -114,6 +114,21 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
         phone:    '1234567890',
         email:    'jasonspringer@aol.com'
       };
+      
+      var finalTaxRate = (function(shippingContact) {
+        var itemsTotal = 0;
+        var nyTaxRate = 0.05;
+        var taxRate = 0;
+        // if we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
+        for (var i = 0; i < items.length; i++) {
+          itemsTotal += items[i].price * items[i].quantity;
+        }
+        if (shippingContact.state === 'NY') {
+            return (itemsTotal * nyTaxRate);
+          } else {
+            return taxRate;
+          }
+      })(shippingContact);
 
       var opts = {
         buttonId: 'bread-checkout-btn',
@@ -134,7 +149,9 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
             cost: 1800
           }
         ],
-        tax: (function(shippingContact) {
+        tax: finalTaxRate,
+
+        /* (function(shippingContact) {
             var itemsTotal = 0;
             var nyTaxRate = 0.05;
             var taxRate = 0;
@@ -148,7 +165,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
                 return taxRate;
             }
           // If I was running a server, the following would be used instead of the if statement above - Jason
-          /* $.ajax({
+          $.ajax({
             url: '/tax',
             type: 'POST',
             data: {shipping: shippingContact, total: itemsTotal} 
@@ -159,7 +176,6 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
               callback(null, data.tax);
             }
           }); */
-        })(shippingContact), 
         onCustomerClose: function(err, custData) {
           if (err !== null) {
             console.error("An error occurred getting customer close data.");
