@@ -166,9 +166,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
                   return taxRate;
               }
             };
-            taxCalculate(shippingContact).done(function(data){
-              callback(null, data);
-            });
+            taxCalculate(shippingContact);
           },
           // If I was running a server, the following would be used instead of the if statement above - Jason
           /* 
