@@ -8,7 +8,7 @@ CHECKLIST:
 ✓ 3. The tax charged to a purchaser should be 5% if the shipping address supplied by
 the customer within the Bread checkout flow is in the state of NY, otherwise tax
 should be 0
-  Note: Since I am not running a server, I calculated the text on the client side. - Jason
+  Note: Since I am not running a server, I calculated the text on the client side.
 
 ✓ 4. Since this test merchant is pre-configured in Bread’s system with loan offerings,
 we are able to display an “as low as $” number on the Bread button - show this.
@@ -20,7 +20,7 @@ x 6. When a user has completed a full checkout, they should receive a success
 message (if approved to proceed). 
   Note: "We aren't able to process your request at this time."
         I think it wouldn't let me complete since it's a test account?
-        I tried adding a done property to opts, minus the ajax, but same popup kept appearing. - Jason 
+        I tried adding a done property to opts, minus the ajax, but same popup kept appearing. 
 
 ✓ 7. If a user closes the form without completing the checkout:
  ✓ a. If declined, they should receive an appropriate message
@@ -31,7 +31,7 @@ message (if approved to proceed).
         Neither worked, so I used customCSS in the opts object. Using customCSS undoes everything, including 
         the default button image, even if only one CSS property is listed. Since the instructions said to 
         use that button and make the text red, I had to edit the button image and in the customCSS, set padding-right 
-        to 50px so the text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency. - Jason
+        to 50px so the text would not overlap. I set the font to Helvetica, Arial, sans-serif for consistency.
 
 ✓ Extra Credit - See notes at bottom of this file for details. 
   Link: https://checkout-sandbox.getbread.com/Flvr4F
@@ -149,7 +149,7 @@ message (if approved to proceed).
           var nyTaxRate = 0.05;
           var otherTaxRate = 0;
           var finalTax = 0;
-          // if we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
+          // If we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
           for (var i = 0; i < items.length; i++) {
             itemsTotal += items[i].price * items[i].quantity;
           }
@@ -215,22 +215,9 @@ message (if approved to proceed).
             }
         }, */
         customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background-image:url('http://jasonspringer.me/apps/bread/checkout/breadicon-edit.jpg');background-size:100% 100%;background-repeat:no-repeat;color:red;display:table-cell;font-family:Helvetica,Arial,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block;padding-right:50px}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}" 
-        }; // end of opts
+      }; // end of opts
 
       bread.checkout(opts);
-      bread.cartCreate(opts, function(err, data) {
-  if (err !== null) {
-    console.error("There was an error: ", err);
-    return
-  }
-
-  // Set the Link URL for a customer to hit
-  var redirectUrl = data.redirectUrl;
-  $("#someLink").attr("href", redirectUrl);
-
-  // Send the data to your backend system.
-  $.POST("/my/backend/system", {redirectUrl: redirectUrl});
-});
     </script>
     </div>
   </body>
@@ -238,7 +225,7 @@ message (if approved to proceed).
 
 <!-- Additional Extra Credit Details
 
-Used Postman to make an API call to https://api-sandbox.getbread.com/carts (POST), used the API key and secret given in the instructions. Body of call below. - Jason
+Used Postman to make an API call to https://api-sandbox.getbread.com/carts (POST) with the API key and secret given in the instructions for the username and password. Body of call below.
 
 {
     "expiration": "2017-09-15",
