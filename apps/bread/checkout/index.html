@@ -32,7 +32,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
 
     <form id="checkout-form" action="checkout" method="post">
 
-      <div id="bread-checkout-btn" data-bread-default-size="true"></div>
+      <div id="bread-checkout-btn" data-bread-default-size=true></div>
       
     </form>
 
@@ -89,17 +89,16 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
         shippingContact: shippingContact,
         billingContact: billingContact,
         asLowAs: true,
-        showInWindow: true,
         shippingOptions: [
           {
             type: '2 Day Delivery',
             typeId: 'UPS_2DAY',
-            cost: 1200,
+            cost: 1200
           }, 
           {
             type: 'Overnight Delivery',
             typeId: 'UPS_1DAY',
-            cost: 1800,
+            cost: 1800
           }
         ],
         calculateTax: function(shippingContact, callback) {
@@ -130,7 +129,7 @@ month". Mouse over the tooltip and click "Not you.. click here" to reset the but
 
           }
         } 
-      };
+      }; //end of opts
 
       bread.checkout(opts);
     </script>
