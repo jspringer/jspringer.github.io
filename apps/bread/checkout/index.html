@@ -19,8 +19,7 @@ in
 x 6. When a user has completed a full checkout, they should receive a success
 message (if approved to proceed). 
   Note: "We aren't able to process your request at this time."
-        I think it wouldn't let me complete since it's a test account?
-        I tried adding a done property to opts, minus the ajax, but same popup kept appearing. 
+        I tried adding a done property to opts in case it may have been related to that, but same popup kept appearing. 
         See: http://jasonspringer.me/apps/bread/checkout/pleasecontactus.png
 
 ✓ 7. If a user closes the form without completing the checkout:
@@ -89,19 +88,6 @@ message (if approved to proceed).
           detailUrl: "https://www.macrumors.com/roundup/iphone-8/",
           quantity: 1
         }];
-
-      /* cart.products.forEach(function (p) {
-        items.push(
-          {
-            name: p.name,                       // required
-            price: parseInt( (p.price * 100) ), // required (value in cents USD)
-            sku: p.sku,                         // required
-            imageUrl: p.imgUrl,                 // optional
-            detailUrl: p.detailUrl,             // required
-            quantity: parseInt(p.quantity)      // required
-          }
-        );
-      });*/
 
       var shippingContact = {
         fullName: 'Jason Springer',
@@ -223,7 +209,6 @@ message (if approved to proceed).
 
       bread.checkout(opts);
     </script>
-    </div>
   </body>
 </html>
 
