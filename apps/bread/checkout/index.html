@@ -134,7 +134,7 @@ message (if approved to proceed).
           var nyTaxRate = 0.05;
           var otherTaxRate = 0;
           var finalTax = 0;
-          // If we can use es6+ JS, I'd use: for...of and use let/const instead of var - Jason
+          // If we can use ES6+ JS, I'd use: for...of and use let/const instead of var - Jason
           for (var i = 0; i < items.length; i++) {
             itemsTotal += items[i].price * items[i].quantity;
           }
@@ -203,8 +203,8 @@ message (if approved to proceed).
               $("#orderConfirmationNumber").text(txToken.orderConfirmationId);
             }
         } */ 
-      }; // end of opts
-
+      }; 
+      
       bread.checkout(opts);
     </script>
   </body>
