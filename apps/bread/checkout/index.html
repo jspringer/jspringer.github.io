@@ -204,8 +204,12 @@ message (if approved to proceed).
             break;
           }
         }, 
-        /* Not sure if this done is necessary since I could not complete the transaction. Adding it did not change 
-           the outcome. See #6 in notes at top. Changed the code to handle it client side since I'm not running a server. 
+        customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background-image:url('http://jasonspringer.me/apps/bread/checkout/breadicon-edit.jpg');background-size:100% 100%;background-repeat:no-repeat;color:red;display:table-cell;font-family:Helvetica,Arial,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block;padding-right:50px}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}"
+
+        /* Not sure if this done is necessary since I could not complete the transaction, so leaving it commented out. 
+           Adding it did not change the outcome. See #6 in notes at top. Changed the code to handle it client side since 
+           I'm not running a server. 
+
         done: function(err, txToken) {
             if (err !== null) {
               alert("There was an error!" + err);
@@ -214,8 +218,7 @@ message (if approved to proceed).
               $("#successPanel").show();
               $("#orderConfirmationNumber").text(txToken.orderConfirmationId);
             }
-        }, */
-        customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background-image:url('http://jasonspringer.me/apps/bread/checkout/breadicon-edit.jpg');background-size:100% 100%;background-repeat:no-repeat;color:red;display:table-cell;font-family:Helvetica,Arial,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block;padding-right:50px}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}" 
+        } */ 
       }; // end of opts
 
       bread.checkout(opts);

@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>Toasty Electronics: Checkout</title>
+    <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
+
+    <style type="text/css">
+      body { 
+        background: #ffffff; 
+        font-size: 14pt; 
+        line-height: 1.25; 
+        color: #434242; 
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; 
+        font-weight: 300; 
+      }
+       
+    </style>
+  </head>
+  <body>
+    <h1>Toasty Electronics</h1>
+    <p><strong>Cart:</strong></p>
+    <div>
+      <p>1 x iPhone 8 (Rose Gold, 256GB)</p>
+      <a href="https://www.macrumors.com/roundup/iphone-8/"><img src="http://jasonspringer.me/apps/bread/checkout/iphone8.jpg" style="width: 300px" /></a>
+      <p><strong>Subtotal (Pre-Tax):</strong> $100.00</p>
+    </div>
+
+    <p><strong>Checkout:</strong></p>
+
+    <form id="checkout-form" action="checkout" method="post">
+      <div id="bread-checkout-btn" data-bread-default-size=true></div>
+    </form>
+
+
+    <script type='text/javascript'>
+      var items = [{
+          name: "iPhone 8 (Rose Gold, 256GB)",
+          price: 10000,
+          sku: "IPH08RG256",
+          imageUrl: "http://jasonspringer.me/apps/bread/checkout/iphone8.jpg",
+          detailUrl: "https://www.macrumors.com/roundup/iphone-8/",
+          quantity: 1
+        }];
+
+      var shippingContact = {
+        fullName: 'Jason Springer',
+        address:  '1 Metropolitan Avenue',
+        address2: 'Apt 3',
+        city:     'Brooklyn',
+        state:    'NY',
+        zip:      '11211',
+        phone:    '5555555555',
+        email:    'jasonspringer@aol.com'
+      };
+
+      var billingContact = {
+        firstName: 'Jason',
+        lastName: 'Springer',
+        address:  '1 Metropolitan Avenue',
+        address2: 'Apt 3',
+        city:     'Brooklyn',
+        state:    'NY',
+        zip:      '11211',
+        phone:    '5555555555',
+        email:    'jasonspringer@aol.com'
+      };
+
+      var opts = {
+        buttonId: 'bread-checkout-btn',
+        items: items,
+        actAsLabel: false,
+        shippingContact: shippingContact,
+        billingContact: billingContact,
+        asLowAs: true,
+        shippingOptions: [
+          {
+            type: '2 Day Delivery',
+            typeId: 'UPS_2DAY',
+            cost: 1200
+          }, 
+          {
+            type: 'Overnight Delivery',
+            typeId: 'UPS_1DAY',
+            cost: 1800
+          }
+        ],
+        calculateTax: function(shippingContact, callback) {
+          var itemsTotal = 0;
+          var nyTaxRate = 0.05;
+          var otherTaxRate = 0;
+          var finalTax = 0;
+          for (var i = 0; i < items.length; i++) {
+            itemsTotal += items[i].price * items[i].quantity;
+          }
+          if (shippingContact.state === 'NY') {
+              finalTax = itemsTotal * nyTaxRate;
+            } else {
+              finalTax = itemsTotal * otherTaxRate;
+            }
+          callback(null, finalTax);
+        },
+        onCustomerClose: function(err, custData) {
+          if (err !== null) {
+            console.error("An error occurred getting customer close data.");
+            return;
+          }
+
+          var customerEmail = custData.email;
+          var qualState     = custData.state;
+          switch (qualState) {
+            case 'PREQUALIFIED':
+              console.log(customerEmail + " was prequalified for financing.");
+            break;
+
+            case 'PARTIALLY_PREQUALIFIED':
+              console.log(customerEmail + " was partially prequalified for financing.");
+            break;
+
+            case 'NOT_PREQUALIFIED':
+              console.log(customerEmail + " was not prequalified for financing.");
+            break;
+
+            case 'ABANDONED':
+              if (customerEmail === undefined || customerEmail === null) {
+                console.log("Unknown customer abandoned their prequalification attempt.");
+              } else {
+                console.log(customerEmail + " abandoned their prequalification attempt.");
+              }
+            break;
+          }
+        }, 
+        customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background-image:url('http://jasonspringer.me/apps/bread/checkout/breadicon-edit.jpg');background-size:100% 100%;background-repeat:no-repeat;color:red;display:table-cell;font-family:Helvetica,Arial,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block;padding-right:50px}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:'i';cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:'Pay Over Time'}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'For '}"
+      }; 
+
+      bread.checkout(opts);
+    </script>
+    </div>
+  </body>
+</html>
