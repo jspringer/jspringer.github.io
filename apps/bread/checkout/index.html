@@ -113,6 +113,7 @@ message (if approved to proceed).
       var opts = {
         buttonId: 'bread-checkout-btn',
         items: items,
+        showInWindow: true,
         actAsLabel: false,
         shippingContact: shippingContact,
         billingContact: billingContact,
@@ -204,7 +205,7 @@ message (if approved to proceed).
             }
         } */ 
       }; 
-      
+
       bread.checkout(opts);
     </script>
   </body>
