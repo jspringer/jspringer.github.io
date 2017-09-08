@@ -42,7 +42,6 @@ message (if approved to proceed).
   <head>
     <title>Toasty Electronics: Checkout</title>
     <script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="7101ea30-8ae3-47ab-a8bd-235860d36f3e"></script>
-
     <style type="text/css">
       body { 
         background: #ffffff; 
@@ -52,15 +51,16 @@ message (if approved to proceed).
         font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; 
         font-weight: 300; 
       }
-       
       /* #bread-checkout-btn, #checkout-form, #bread-checkout-btn-bread-iframe { color: red !important; } 
          Didn't overwrite Bread button css, since #8 in notes above. */
-
     </style>
   </head>
+
   <body>
     <h1>Toasty Electronics</h1>
+
     <p><strong>Cart:</strong></p>
+    
     <div>
       <p>1 x iPhone 8 (Rose Gold, 256GB)</p>
       <a href="https://www.macrumors.com/roundup/iphone-8/"><img src="http://jasonspringer.me/apps/bread/checkout/iphone8.jpg" style="width: 300px" /></a>
@@ -70,9 +70,7 @@ message (if approved to proceed).
     <p><strong>Checkout:</strong></p>
 
     <form id="checkout-form" action="checkout" method="post">
-
       <div id="bread-checkout-btn" data-bread-default-size=true></div>
-      
     </form>
     
     <!-- If done is used in opts: 
