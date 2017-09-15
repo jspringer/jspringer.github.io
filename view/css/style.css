@@ -391,6 +391,11 @@ li {
   -webkit-animation: magnify 0.1s ease normal forwards;
 }
 
+#nav-icon-blog:hover {
+  color: #000000;
+  animation: magnify 0.1s linear normal forwards;
+  -webkit-animation: magnify 0.1s ease normal forwards;
+}
 
 #navbar-logo-image {
   height: 40px;
@@ -1079,7 +1084,7 @@ li {
   }
 
   #navbar-right-side .navbar-right li a {
-    margin: 0 15px 30px 30px; 
+    margin: 0 20px 30px 15px; 
     padding: 0;  
     font-size: 18pt;
   }
@@ -1182,7 +1187,7 @@ li {
 
 }    
 
-@media (max-width: 930px) {
+@media (max-width: 970px) {
   #navbar-right-side {
     display: none;
   }
