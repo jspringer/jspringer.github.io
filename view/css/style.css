@@ -392,7 +392,7 @@ li {
 }
 
 #nav-icon-blog:hover {
-  color: #000000;
+  color: #d54e21;
   animation: magnify 0.1s linear normal forwards;
   -webkit-animation: magnify 0.1s ease normal forwards;
 }
