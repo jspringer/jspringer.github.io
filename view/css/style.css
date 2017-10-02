@@ -590,7 +590,7 @@ li {
   background-image:-webkit-gradient(left bottom,color-stop(rgba(0,244,255,1.00) 0%),color-stop(rgba(17,55,173,1.00) 100%));
   background-image:linear-gradient(45deg,rgba(0,244,255,1.00) 0%,rgba(17,55,173,1.00) 100%); 
   background-image: linear-gradient(300deg,#81b2ed,#87b8f0,#93c5f8 70%,#aadafe,#c5ebfe);  */
-  background-image: linear-gradient(300deg,#48cfad 1%,#4a89dc);
+  background-image: linear-gradient(300deg,#48cfad,#81b2ed 70%,#aadafe);
   padding: 30px;
   box-shadow: 1.5px 1.5px 4px #c8c8c8;
 }
