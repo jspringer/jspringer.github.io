@@ -832,7 +832,7 @@ li {
 }
 
 #contact .row { 
-  padding-top: 30px; 
+  padding-top: 0; 
 }
 
 .kxcd {
@@ -860,8 +860,6 @@ li {
 
 #contact-intro {
   color: #ffffff;
-  margin-top: 50px;
-  margin-bottom: 25px;
 }
 
 #contact-intro a:hover {
@@ -1144,7 +1142,7 @@ li {
   }
   
   #contact { 
-    padding-bottom: 60px; 
+    padding-bottom: 0; 
   }
 
   #contact a .icon { 
@@ -1193,11 +1191,6 @@ li {
     margin-right: 50px;
   }
 
-  #contact {
-    padding-bottom: 20px;
-    margin-bottom: 0;
-  }
-
 }    
 
 @media (max-width: 970px) {
@@ -1234,7 +1227,7 @@ li {
 
 
 }
-@media only screen and (orientation: landscape) and (max-width: 767px)  { 
+/* @media only screen and (orientation: landscape) and (max-width: 767px)  { 
   .container { 
     padding: 0 15px 15px 15px; 
   }
@@ -1246,4 +1239,4 @@ li {
   .scroll-down{
     position: absolute;
   }
-}
+} */
