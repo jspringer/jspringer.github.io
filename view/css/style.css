@@ -411,6 +411,12 @@ li {
   -webkit-animation: magnify 0.1s ease normal forwards;
 }
 
+#nav-icon-dribbble:hover {
+  color: #ea4c89;
+  animation: magnify 0.1s linear normal forwards;
+  -webkit-animation: magnify 0.1s ease normal forwards;
+}
+
 #navbar-logo-image {
   height: 40px;
   position: absolute;
