@@ -126,7 +126,6 @@ textarea {
 a {
   transition: all .1s ease-in;
   color: #65bdff;
-  font-weight: 300;
   /* blue text */
   /* #65bdff,#87b8f0,#93c5f8,#aadafe,#c5ebfe */
 }
@@ -227,24 +226,24 @@ li {
 }
 
 .text-italic {
-  font-style: italic;
+  font-style: italic !important;
 }
 
 .text-small {
-  font-size: 8pt;
-  font-weight: 300;
+  font-size: 8pt !important;
+  font-weight: 300 !important;
 }
 
 .font-weight-300 {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 .font-weight-400 {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .font-weight-500 {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .inline {
@@ -417,6 +416,13 @@ li {
   -webkit-animation: magnify 0.1s ease normal forwards;
 }
 
+/* #navbar-logo-image {
+  height: 40px;
+  position: relative;
+  top: -20px;
+  left: -15px;
+} */
+
 #navbar-logo-image {
   height: 40px;
   position: absolute;
@@ -460,6 +466,16 @@ li {
   border-bottom: none;
 }
 
+/* .circle {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 15px;
+  top: 3px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+} */
 
 /* ******************* TOP ******************* */
 
@@ -668,6 +684,10 @@ li {
   padding-bottom: 50px;
 }
 
+.projects {
+  margin-top: 40px;
+}
+
 .project {
   margin-top: 0;
   padding-top: 0;
@@ -732,7 +752,8 @@ li {
 
 #coursework { 
   font-size: 12pt; 
-  padding-bottom: 80px;
+  padding-bottom: 0;
+  margin-top: 20px;
 }
 
 .courses-list {
@@ -1063,6 +1084,15 @@ li {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+
+  .course-type {
+    padding-left: 30px;
+  }
+
+  .courses-list {
+    padding-left: 50px;
+    padding-bottom: 10px;
+  }
 }
 
 @media (max-width: 767px) { 
@@ -1206,6 +1236,29 @@ li {
 }
 
 @media only screen and (orientation: portrait) and (max-width: 767px)  {
+  .intro-p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+  
+  .courses-header h3 {
+    font-size: 1.9rem;
+  }
+
+  .course-type h4 {
+    font-size: 1.6rem;
+  }
+
+  .courses-list p {
+    font-size: 1.4rem;
+  }
+
+  .courses-block {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .bg-image {
     /*  -webkit-background-size: auto 150%; */
     background-attachment: scroll;
