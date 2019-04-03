@@ -443,7 +443,7 @@ li {
   display: none;
   font-size: 22pt;
   color: #000000;
-  font-weight: 400;
+  font-weight: 100;
   text-align: center;
   width: 100%;
   position: absolute;
@@ -657,7 +657,7 @@ li {
 }
 
 #about-intro a {
-  color: #eaeaea; 
+  color: #f0f0f0; 
   font-weight: 400;
 }
 
