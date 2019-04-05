@@ -849,7 +849,7 @@ li {
 /* ******************* JOB HISTORY ******************* */
 
 #job-history {
-  padding-bottom: 100px;
+  padding-bottom: 130px;
 }
 
 .job-details { 
@@ -891,7 +891,7 @@ li {
 }
 
 #job-history-hr {
-  background-image: linear-gradient(30deg,#f9d423,#ff4e50);
+  background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
   padding-right: 3px;
 }
 
@@ -904,7 +904,7 @@ li {
 }
 
 #contact-hr {
-  background-image: linear-gradient(30deg,#00c9ff,#92fe9d);
+  background-image: linear-gradient(30deg,#f9d423,#ff4e50);
   padding-right: 3px;
 }
 
