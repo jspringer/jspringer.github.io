@@ -985,6 +985,12 @@ li {
   color: #ffffff;
 }
 
+#contact-intro a {
+  text-decoration: none;
+  box-shadow: none;
+  text-decoration: none; 
+}
+
 #contact-intro a:hover {
   color: #ffffff;
 }
