@@ -829,6 +829,8 @@ li {
 
 .skills-list a {
   border-bottom: 0;
+  box-shadow: none;
+  text-decoration: none;
 }
 
 #skills-hr {
