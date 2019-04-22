@@ -74,7 +74,7 @@ h2 {
 h3 { 
   font-weight: 600; 
   color: rgba(34, 34, 34, 0.95); 
-  font-size: 16pt; 
+  font-size: 1.9rem; 
 }
 
 h4 { 
@@ -279,23 +279,23 @@ li {
 }
 
 .font-mag-sm {
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
 }
 
 .font-mag-st {
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
 }
 
 .font-mag-md {
-  font-size: 1.4rem !important;
+  font-size: 1.3rem !important;
 }
 
 .font-mag-lg {
-  font-size: 1.7rem !important;
+  font-size: 1.5rem !important;
 }
 
 .font-mag-xl {
-  font-size: 2rem !important;
+  font-size: 1.7rem !important;
 }
 
 .inline {
