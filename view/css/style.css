@@ -127,7 +127,8 @@ textarea {
 
 a {
   text-decoration: none;
-  box-shadow: inset 0 -4px 0 0 #a8d9ff;
+  border-bottom: thin solid #65bdff;
+  /* box-shadow: inset 0 -1px 0 0 #a8d9ff; */
   color: #000000;
   /* thin underline blue */ 
 }
@@ -135,7 +136,8 @@ a {
 a:hover {
   transition: all .1s ease-in;
   color: #000000;
-  background-color: #a8d9ff;
+  border-bottom: medium solid #65bdff;
+  /* background-color: #a8d9ff; */
   text-decoration: none;
   /* blue text */
   /* #a8d9ff,#65bdff,#87b8f0,#93c5f8,#aadafe,#c5ebfe */
@@ -143,6 +145,17 @@ a:hover {
 
 sup a {
   box-shadow: none;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+sup a:hover {
+  transition: all .1s ease-in;
+  color: #65bdff;
+  border-bottom: none;
+  text-decoration: none;
+  /* blue text */
+  /* #a8d9ff,#65bdff,#87b8f0,#93c5f8,#aadafe,#c5ebfe */
 }
 
 li {
@@ -727,25 +740,25 @@ li {
 }
 
 #about-intro {
-  color: #ffffff; 
+  color: #fafafa; 
   font-weight: 300;
   padding: 0 5px 0 5px;
   margin: 0;
 }
 
 #about-intro a {
-  color: #f0f0f0; 
-  font-weight: 400;
-  box-shadow: inset 0 -1px 0 0 #f0f0f0;
+  color: #ffffff; 
+  font-weight: 300;
+  /* box-shadow: inset 0 -1px 0 0 #f0f0f0; */
+  border-bottom: thin solid #ffffff;
 }
 
 #about-intro a:hover {
   transition: all .1s ease-in;
   text-decoration: none;
-  border-bottom: none;
+  border-bottom: medium solid #ffffff;
   text-decoration: none;
-  color: #000000;
-  background-color: #f0f0f0;
+  color: #ffffff;
  /* text-decoration: underline !important; */
 
 }
@@ -832,6 +845,13 @@ li {
 }
 
 .skills-list a {
+  border-bottom: 0;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.skills-list a:hover {
+  color: #65bdff;
   border-bottom: 0;
   box-shadow: none;
   text-decoration: none;
