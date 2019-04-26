@@ -127,7 +127,7 @@ textarea {
 
 a {
   text-decoration: none;
-  border-bottom: thin solid #65bdff;
+  border-bottom: thin dashed #65bdff;
   /* box-shadow: inset 0 -1px 0 0 #a8d9ff; */
   color: #000000;
   /* thin underline blue */ 
@@ -136,7 +136,7 @@ a {
 a:hover {
   transition: all .1s ease-in;
   color: #000000;
-  border-bottom: medium solid #65bdff;
+  border-bottom: thin solid #65bdff;
   /* background-color: #a8d9ff; */
   text-decoration: none;
   /* blue text */
@@ -750,13 +750,13 @@ li {
   color: #ffffff; 
   font-weight: 300;
   /* box-shadow: inset 0 -1px 0 0 #f0f0f0; */
-  border-bottom: thin solid #ffffff;
+  border-bottom: thin dashed #ffffff;
 }
 
 #about-intro a:hover {
   transition: all .1s ease-in;
   text-decoration: none;
-  border-bottom: medium solid #ffffff;
+  border-bottom: thin solid #ffffff;
   text-decoration: none;
   color: #ffffff;
  /* text-decoration: underline !important; */
