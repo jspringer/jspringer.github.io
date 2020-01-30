@@ -250,3 +250,4 @@ function iconAnimationOnScrollDown() {
 function activateStellarParallax() {
   $.stellar();
 } */
+
